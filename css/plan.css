@@ -1,0 +1,88 @@
+/* --- 6. Sección Plan --- */
+section.plan {
+    padding: 6rem 0; /* 96px */
+    background-color: var(--gris-claro);
+}
+.plan-header {
+    text-align: center;
+    margin-bottom: 4rem; /* 64px */
+}
+.plan-header .subtitle {
+    color: var(--rojo);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.plan-header h2 {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 800;
+    color: var(--negro);
+    margin-top: 0.5rem;
+}
+.plan-header p {
+    font-size: 1.125rem; /* 18px */
+    color: var(--gris-oscuro);
+    max-width: 42rem; /* 672px */
+    margin: 1rem auto 0;
+}
+@media (min-width: 768px) {
+     .plan-header h2 {
+        font-size: 3rem; /* 48px */
+    }
+}
+
+.plan-grid {
+    display: grid;
+    gap: 2rem; /* 32px */
+}
+@media (min-width: 768px) {
+    .plan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .plan-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.plan-card {
+    background-color: var(--blanco);
+    padding: 2rem; /* 32px */
+    border-radius: 0.75rem; /* 12px */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--gris-claro);
+    transition: all 0.3s ease-in-out;
+}
+.plan-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--rojo);
+    transform: translateY(-8px);
+}
+.plan-card-icon {
+    width: 4rem; /* 64px */
+    height: 4rem; /* 64px */
+    background-color: rgba(204, 0, 0, 0.1); /* rojo al 10% */
+    color: var(--rojo);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem; /* 24px */
+}
+.plan-card-icon svg {
+    width: 32px;
+    height: 32px;
+}
+.plan-card h3 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    color: var(--negro);
+    margin-bottom: 0.75rem; /* 12px */
+    margin-top: 0;
+}
+.plan-card p {
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+    margin: 0;
+}

@@ -1,0 +1,8 @@
+/* FAQ — acordeón */
+section.faq{ padding:4rem 0; background: linear-gradient(180deg,#fff 0%, #fff 100%); }
+.faq-inner{ max-width:900px; margin:0 auto; }
+.faq-item{ border-bottom:1px solid rgba(0,0,0,0.04); padding:1rem 0; }
+.faq-question{ display:flex; justify-content:space-between; align-items:center; cursor:pointer; padding:.5rem 0; }
+.faq-answer{ max-height:0; overflow:hidden; transition:max-height .35s ease, padding .25s ease; padding:0; color:var(--gris-oscuro) }
+.faq-item.open .faq-answer{ max-height:400px; padding:.5rem 0 }
+.faq-question h4{ margin:0; font-size:1rem }

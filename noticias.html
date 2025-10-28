@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actualidad — AHORA NACIÓN</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    body {
+      padding-top: 40px; /* Ajuste para la barra superior fija */
+    }
+  </style>
+</head>
+<body>
+  <div data-include="includes/header.html"></div>
+  <div class="page-hero page-hero--small" aria-hidden="false">
+    <div class="container">
+      <h1>Actualidad — Noticias y Eventos</h1>
+      <p class="subtitle">Comunicados oficiales, notas de prensa y agenda de actividades.</p>
+    </div>
+  </div>
+
+  <main class="container" style="padding:2.5rem 1.5rem;">
+    <section id="latest-news" class="news-grid">
+      <!-- Bloque de tarjetas de noticias (placeholder) -->
+      <article class="news-card">
+        <img src="https://placehold.co/600x360/cccccc/000000?text=Noticia+1" alt="Noticia 1">
+        <div class="news-card-body">
+          <h3>Noticia 1 — Título breve</h3>
+          <p class="meta">26/10/2025 — Autor</p>
+          <p>Resumen corto de la noticia para enganchar al lector. <a href="#">Leer más</a></p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="https://placehold.co/600x360/cccccc/000000?text=Noticia+2" alt="Noticia 2">
+        <div class="news-card-body">
+          <h3>Noticia 2 — Título breve</h3>
+          <p class="meta">16/10/2025 — Autor</p>
+          <p>Resumen corto de la noticia. <a href="#">Leer más</a></p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="https://placehold.co/600x360/cccccc/000000?text=Evento" alt="Evento">
+        <div class="news-card-body">
+          <h3>Evento próximo — Fecha y lugar</h3>
+          <p class="meta">Próximo</p>
+          <p>Información breve del evento y enlace para registrarse. <a href="#">Ver evento</a></p>
+        </div>
+      </article>
+    </section>
+
+    <aside class="news-cta" style="margin-top:2rem;">
+      <div class="cta card">
+        <h4>Suscríbete a nuestras noticias</h4>
+        <p>Recibe comunicados y convocatorias en tu correo.</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirme</button>
+        </form>
+      </div>
+
+      <div class="cta card" style="margin-top:1rem;">
+        <h4>Afíliate</h4>
+        <p>Descarga la ficha de afiliación o visita la sección de participación.</p>
+        <a class="button" href="participa.html#afiliacion">Ir a Afiliación</a>
+      </div>
+    </aside>
+  </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="js/includes.js" defer></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/scroll-animate.js" defer></script>
+</body>
+</html>

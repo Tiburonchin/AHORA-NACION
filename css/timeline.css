@@ -1,0 +1,9 @@
+/* Línea de Tiempo — pasos horizontales en desktop */
+section.timeline{ padding:5rem 0; background: linear-gradient(180deg,#fff 0%, #fbfbfd 100%); }
+.timeline-track{ max-width:1100px; margin:0 auto; }
+.timeline-items{ display:flex; flex-direction:column; gap:1.25rem }
+@media(min-width:900px){ .timeline-items{ flex-direction:row; } }
+.timeline-step{ background:var(--blanco); padding:1rem; border-radius:10px; flex:1; text-align:left; box-shadow:0 8px 20px rgba(0,0,0,0.03); opacity:.9; transform:translateY(20px); transition:transform .45s ease, opacity .45s ease; }
+.timeline-step.is-visible{ transform:none; opacity:1 }
+.timeline-step h5{ margin:0 0 .5rem 0 }
+.timeline-step p{ margin:0; color:var(--gris-oscuro) }

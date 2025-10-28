@@ -1,0 +1,19 @@
+/* Valores — tarjetas en armonía */
+section.values {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, var(--gris-claro) 0%, #fbfbfb 100%);
+}
+.values-header { text-align: center; margin-bottom: 2.5rem; }
+.values-grid { display: grid; gap: 1.25rem; }
+@media (min-width:768px){ .values-grid { grid-template-columns: repeat(3,1fr); } }
+.value-card {
+    background: var(--blanco);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.03);
+    text-align: center;
+}
+.value-card h4 { margin: 0 0 .5rem 0; color: var(--negro); }
+.value-card p { margin: 0; color: var(--gris-oscuro); font-weight: 300; }
+.value-icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(204,0,0,0.08); display:inline-flex; align-items:center; justify-content:center; color:var(--rojo); margin-bottom: .75rem; }

@@ -1,0 +1,91 @@
+/* css/main.css
+   Archivo maestro que importa los CSS parciales del proyecto.
+   Mantén aquí el orden lógico: variables primero, luego utilidades y secciones.
+   NOTA: los paths son relativos a este archivo (está dentro de la carpeta css/).
+*/
+
+@import url('variables.css');
+
+/* Animaciones y utilidades */
+@import url('animations.css');
+
+/* Componentes globales */
+@import url('navbar.css');
+@import url('hero.css');
+@import url('manifesto.css');
+@import url('plan.css');
+@import url('lopez-chao.css');
+@import url('cta.css');
+@import url('footer.css');
+
+/* Secciones específicas */
+@import url('values.css');
+@import url('testimonials.css');
+@import url('presence.css');
+@import url('timeline.css');
+@import url('faq.css');
+@import url('news.css');
+@import url('events.css');
+@import url('contact.css');
+@import url('team.css');
+
+/* Fin de imports. Si añades nuevos archivos CSS, añádelos aquí.
+   Para mejores prestaciones en producción, considera concatenar/minificar este archivo
+   y servirlo como un único CSS estático en el servidor (mejor que múltiples @import).
+*/
+
+.hero--small {
+    min-height: 40vh;
+}
+
+.participa-main {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.faq-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.faq-question h4 {
+    margin: 0;
+}
+
+.faq-answer {
+    padding: 1rem;
+}
+
+.plan-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover, .plan-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hero-cta {
+    transition: transform 0.3s ease;
+}
+
+.hero-cta:hover, .hero-cta:focus {
+    transform: scale(1.05);
+}
+

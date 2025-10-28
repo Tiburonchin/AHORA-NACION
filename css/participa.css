@@ -1,0 +1,215 @@
+/* --- 1. Variables de Color y Globales (proporcionadas) --- */
+:root {
+    --rojo: #B80000;
+    --negro: #1A1A1A;
+    --guinda: #8B0000;
+    --gris-oscuro: #333333;
+    --gris-claro: #F0F0F0;
+    --blanco: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--gris-claro);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    color: var(--negro);
+}
+
+h1, h2, h3 {
+    text-wrap: balance;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3rem; /* 48px */
+    line-height: 1.1;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.25rem; /* 36px */
+    line-height: 1.2;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.5rem; /* 24px */
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem; /* 24px */
+    box-sizing: border-box; 
+}
+
+/* --- 2. Estilos de Navegación de Página (Simulación) --- */
+.page-content {
+    display: none;
+    /* Animación de entrada */
+    animation: fadeIn 0.6s ease-out;
+}
+
+.page-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- 3. Estilos Específicos de Componentes --- */
+
+/* Sección I: Principio Rector - Animación */
+.principle-center {
+    animation: pulse-light 3s infinite ease-in-out;
+}
+
+@keyframes pulse-light {
+    0% { box-shadow: 0 0 0 0 rgba(184, 0, 0, 0.4); }
+    70% { box-shadow: 0 0 0 20px rgba(184, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(184, 0, 0, 0); }
+}
+
+/* Sección III: Tabs de Derechos y Deberes */
+.tab-button.active {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border-color: var(--rojo);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+/* Sección V: Flowchart (Diagrama de Flujo) */
+.flowchart-step {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.flowchart-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.flowchart-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2.5rem; /* (8rem / 2) - (ancho / 2) */
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: var(--rojo);
+}
+
+.flowchart-step:not(:last-child)::before {
+    content: '►'; /* Flecha */
+    position: absolute;
+    top: 50%;
+    right: -4rem;
+    transform: translateY(-50%);
+    color: var(--rojo);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Versión responsiva del flowchart (vertical) */
+@media (max-width: 768px) {
+    .flowchart-step {
+        margin-bottom: 2rem;
+    }
+    .flowchart-step:not(:last-child)::after {
+        top: auto;
+        bottom: -1rem;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 20px;
+    }
+    .flowchart-step:not(:last-child)::before {
+        top: auto;
+        bottom: -2rem;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) rotate(90deg);
+    }
+}
+
+/* Página Afiliación: Formulario Multi-step */
+.form-step {
+    display: none;
+}
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+/* Estilos para la barra de progreso */
+.progress-bar-step {
+    transition: all 0.3s ease;
+}
+.progress-bar-step.active {
+    background-color: var(--rojo);
+    border-color: var(--rojo);
+    color: var(--blanco);
+}
+.progress-bar-line {
+    transition: width 0.4s ease;
+}
+
+/* Página Afiliación: Proceso de Evaluación */
+.eval-step {
+    position: relative;
+}
+.eval-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 2px;
+    background-color: var(--rojo);
+    z-index: 0;
+}
+.eval-step-content {
+    z-index: 1;
+}
+@media (max-width: 768px) {
+        .eval-step:not(:last-child)::after {
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        transform: translateY(100%) translateX(-50%);
+        width: 2px;
+        height: 100%;
+    }
+}

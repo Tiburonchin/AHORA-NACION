@@ -1,0 +1,30 @@
+/* --- 2. Animaciones de Scroll --- */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-scroll-arrow {
+    position: absolute;
+    bottom: 2.5rem; /* 40px */
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--blanco);
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}

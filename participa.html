@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Participa — AHORA NACIÓN</title>
+    <!-- Carga de Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fuente Inter (moderna y legible) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/participa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+      body {
+        padding-top: 40px; /* Ajuste para la barra superior fija */
+      }
+    </style>
+</head>
+    <!-- Configuración de Tailwind para usar los colores del partido -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rojo': '#B80000',
+                        'negro': '#1A1A1A',
+                        'guinda': '#8B0000',
+                        'gris-oscuro': '#333333',
+                        'gris-claro': '#F0F0F0',
+                        'blanco': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gris-claro">
+
+<body class="participa-page">
+  <div data-include="includes/header.html"></div>
+
+  <header class="hero hero--small hero--participa">
+    <div class="hero-background"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="scroll-animate">
+        <h1 class="hero-title">Únete al Movimiento</h1>
+        <p class="hero-subtitle">Tu voz, tu fuerza, tu nación. Es hora de actuar.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="page-participacion" class="page-content active">
+        
+        <!-- SECCIÓN I: PRINCIPIO RECTOR -->
+        <section class="bg-blanco py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-rojo">Democracia y Unidad</h1>
+                    <p class="text-xl md:text-2xl text-gris-oscuro mt-4">
+                        Promovemos el disenso y la oposición para discutir la naturaleza del cambio, bajo un principio fundamental.
+                    </p>
+                </div>
+                
+                <!-- Infografía Interactiva -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 items-center">
+                    <div class="text-center md:text-right p-6 rounded-lg">
+                        <h3 class="text-rojo">Un Partido-Escuela</h3>
+                        <p class="text-gris-oscuro mt-2">
+                            Buscamos formar políticamente a los ciudadanos para que ejerzan su participación de forma ética, democrática y responsable.
+                        </p>
+                    </div>
+                    
+                    <!-- Elemento Central con Animación -->
+                    <div class="principle-center p-8 bg-rojo text-blanco rounded-full aspect-square flex items-center justify-center shadow-2xl max-w-[280px] mx-auto">
+                        <h2 class="text-3xl font-black leading-tight">"Un Militante<br>Un Voto"</h2>
+                    </div>
+                    
+                    <div class="text-center md:text-left p-6 rounded-lg">
+                        <h3 class="text-rojo">Razón de Estado</h3>
+                        <p class="text-gris-oscuro mt-2">
+                            Alentamos un sistema de partidos que permita discutir y fortalecer la naturaleza del propio cambio que proponemos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN II: AFILIACIÓN (CTA) -->
+        <section class="bg-negro text-blanco py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold">Da el Primer Paso</h2>
+                    <p class="text-lg md:text-xl text-gris-claro mt-6">
+                        El afiliado es todo ciudadano con derecho a sufragio que se une libre y voluntariamente. Diseñamos una estrategia de afiliación dirigida a la ciudadanía en general y en especial a la juventud.
+                    </p>
+                    <p class="text-md text-gray-400 mt-4">
+                        (Puedes participar como simpatizante por al menos tres meses antes de solicitar tu afiliación).
+                    </p>
+                    
+                    <!-- Botón de Redirección (Navegación JS) -->
+                    <a href="#afiliacion" 
+                       class="nav-link inline-block bg-rojo text-blanco text-xl font-bold px-12 py-4 rounded-lg shadow-lg mt-10
+                              transform transition-all duration-300 ease-in-out
+                              hover:bg-blanco hover:text-rojo hover:scale-105 hover:shadow-2xl
+                              focus:outline-none focus:ring-4 focus:ring-rojo focus:ring-opacity-50">
+                        ¡AFÍLIATE A AHORA NACIÓN!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN III: DERECHOS Y DEBERES -->
+        <section class="bg-gris-claro py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="text-center text-negro mb-12">Participación Activa: Tus Derechos y Deberes</h2>
+                
+                <!-- Toggle Interactivo (Tabs) -->
+                <div class="max-w-5xl mx-auto">
+                    <!-- Botones del Tab -->
+                    <div class="flex justify-center border-b-2 border-gray-300 mb-8">
+                        <button class="tab-button active text-xl font-semibold py-4 px-8 border-b-4 border-transparent transition-all duration-300" data-tab="derechos">
+                            Tus Derechos
+                        </button>
+                        <button class="tab-button text-xl font-semibold py-4 px-8 border-b-4 border-transparent text-gray-600 transition-all duration-300" data-tab="deberes">
+                            Tus Deberes
+                        </button>
+                    </div>
+                    
+                    <!-- Contenido de los Tabs -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Panel de Derechos -->
+                        <div id="tab-derechos" class="tab-content active">
+                            <ul class="space-y-4">
+                                <!-- Item con Icono -->
+                                <li class="bg-blanco p-6 rounded-lg shadow-md flex items-start space-x-4">
+                                    <svg class="w-8 h-8 text-rojo flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.682A3 3 0 005.436 7.318M11 5.882a3 3 0 015.564 0"></path></svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold">Voz y Voto</h3>
+                                        <p class="text-gris-oscuro">Participar con derecho a voz y voto en todo acto o evento convocado.</p>
+                                    </div>
+                                </li>
+                                <!-- Item con Icono -->
+                                <li class="bg-blanco p-6 rounded-lg shadow-md flex items-start space-x-4">
+                                    <svg class="w-8 h-8 text-rojo flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12 12 0 0012 21.417a12 12 0 008.618-15.417z"></path></svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold">Elegir y ser Elegido</h3>
+                                        <p class="text-gris-oscuro">Proponer y ser propuesto, así como elegir y ser elegido para cualquier cargo de elección popular.</p>
+                                    </div>
+                                </li>
+                                <!-- Item con Icono -->
+                                <li class="bg-blanco p-6 rounded-lg shadow-md flex items-start space-x-4">
+                                    <svg class="w-8 h-8 text-rojo flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold">Proponer y Criticar</h3>
+                                        <p class="text-gris-oscuro">Proponer tareas, iniciativas, planteamientos y críticas constructivas.</p>
+                                    </div>
+                                </li>
+                                <!-- Item con Icono -->
+                                <li class="bg-blanco p-6 rounded-lg shadow-md flex items-start space-x-4">
+                                    <svg class="w-8 h-8 text-rojo flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold">Derecho de Defensa</h3>
+                                        <p class="text-gris-oscuro">Ejercer su derecho de defensa en procedimientos disciplinarios.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Panel de Deberes -->
+                        <div id="tab-deberes" class="tab-content">
+                             <ul class="space-y-4">
+                                <!-- Item con Icono -->
+                                <li class="bg-gris-oscuro text-blanco p-6 rounded-lg shadow-md flex items-start space-x-4">
+                                    <svg class="w-8 h-8 text-rojo flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-blanco">Colaborar Activamente</h3>
+                                        <p class="text-gris-claro">Colaborar activa y responsablemente con el logro de los fines y objetivos.</p>
+                                    </div>
+                                </li>
+                                <!-- Item con Icono -->
+                                <li class="bg-gris-oscuro text-blanco p-6 rounded-lg shadow-md flex items-start space-x-4">
+                                    <svg class="w-8 h-8 text-rojo flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-blanco">Elegir Representantes</h3>
+                                        <p class="text-gris-claro">Elegir a los representantes en los órganos del partido.</p>
+                                    </div>
+                                </li>
+                                <!-- Item con Icono -->
+                                <li class="bg-gris-oscuro text-blanco p-6 rounded-lg shadow-md flex items-start space-x-4">
+                                    <svg class="w-8 h-8 text-rojo flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-blanco">Ética y Conducta</h3>
+                                        <p class="text-gris-claro">Practicar las normas de ética y buena conducta, dando muestra de honestidad, veracidad y solidaridad.</p>
+                                    </div>
+                                </li>
+                                <!-- Item con Icono -->
+                                <li class="bg-gris-oscuro text-blanco p-6 rounded-lg shadow-md flex items-start space-x-4">
+                                    <svg class="w-8 h-8 text-rojo flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-blanco">Cumplir el Estatuto</h3>
+                                        <p class="text-gris-claro">Cumplir el Estatuto, reglamentos y acuerdos del partido.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN IV: FRENTES DE PARTICIPACIÓN -->
+        <section class="bg-blanco py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="text-center text-negro mb-16">Frentes de Participación Especializados</h2>
+                
+                <!-- Tarjetas de Colaboración -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Tarjeta 1: Juventudes -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
+                                transform transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/B80000/FFFFFF?text=Juventudes" alt="Jóvenes en debate" class="w-full h-48 object-cover">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-rojo">Juventudes</h3>
+                            <p class="text-gris-oscuro mt-3 mb-5">
+                                La Secretaría Nacional de Juventudes dirige, atiende y lleva a cabo iniciativas de responsabilidad social y estrategias de intervención política.
+                            </p>
+                            <a href="#organizacion-juventudes" class="font-semibold text-rojo hover:text-guinda transition-colors">
+                                Conoce el Plan de Trabajo &rarr;
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta 2: Mujer -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
+                                transform transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/333333/FFFFFF?text=Mujer" alt="Mujeres en un evento" class="w-full h-48 object-cover">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-rojo">Mujer</h3>
+                            <p class="text-gris-oscuro mt-3 mb-5">
+                                La Secretaría Nacional de la Mujer promueve la participación activa, organiza eventos de capacitación (incluyendo salud emocional) y defiende sus derechos.
+                            </p>
+                            <a href="#organizacion-mujer" class="font-semibold text-rojo hover:text-guinda transition-colors">
+                                Conoce el Plan de Trabajo &rarr;
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta 3: Formación y Liderazgo -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
+                                transform transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/8B0000/FFFFFF?text=Liderazgo" alt="Aula de formación política" class="w-full h-48 object-cover">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-rojo">Formación y Liderazgo</h3>
+                            <p class="text-gris-oscuro mt-3 mb-5">
+                                La Escuela de Formación Política fomenta la participación de nuevos cuadros de dirigentes y realiza actividades de educación cívica y democrática.
+                            </p>
+                            <a href="#organizacion-formacion" class="font-semibold text-rojo hover:text-guinda transition-colors">
+                                Conoce la Escuela &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN V: VOTO Y DEMOCRACIA INTERNA -->
+        <section class="bg-gris-claro py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-negro mb-6">Voto y Democracia Interna</h2>
+                <p class="text-xl text-gris-oscuro max-w-4xl mx-auto mb-16">
+                    Las elecciones de autoridades y candidatos son dirigidas por el Tribunal Electoral Nacional (TEN), respetando siempre la Constitución y los criterios de Paridad y Alternancia.
+                </p>
+
+                <!-- Diagrama de Flujo Interactivo (Animado con JS) -->
+                <div class="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32">
+                    <!-- Paso 1 -->
+                    <div class="flowchart-step text-center w-60">
+                        <div class="bg-blanco p-6 rounded-xl shadow-lg border-t-4 border-rojo h-full">
+                            <h3 class="text-lg text-rojo">Modalidad de Elección</h3>
+                            <p class="text-sm text-gris-oscuro mt-2">
+                                El partido determina la modalidad de sus elecciones primarias (voto universal, solo afiliados, o delegados).
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Paso 2 -->
+                    <div class="flowchart-step text-center w-60" style="transition-delay: 200ms;">
+                        <div class="bg-blanco p-6 rounded-xl shadow-lg border-t-4 border-rojo h-full">
+                            <h3 class="text-lg text-rojo">Dirección del T.E.N.</h3>
+                            <p class="text-sm text-gris-oscuro mt-2">
+                                El Tribunal Electoral Nacional (TEN) es la autoridad máxima que dirige y supervisa todo el proceso electoral interno.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Paso 3 -->
+                    <div class="flowchart-step text-center w-60" style="transition-delay: 400ms;">
+                        <div class="bg-blanco p-6 rounded-xl shadow-lg border-t-4 border-rojo h-full">
+                            <h3 class="text-lg text-rojo">Listas de Candidatos</h3>
+                            <p class="text-sm text-gris-oscuro mt-2">
+                                Se respeta estrictamente la Paridad y Alternancia en la conformación de todas las listas de candidatos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+        <main id="page-afiliacion" class="page-content">
+        
+        <div class="container mx-auto px-6 py-20 md:py-28">
+            <div class="max-w-4xl mx-auto bg-blanco rounded-xl shadow-2xl overflow-hidden">
+                
+                <!-- Encabezado de la Página -->
+                <div class="p-8 md:p-12 bg-rojo text-blanco">
+                    <a href="#participacion" class="nav-link text-sm opacity-80 hover:opacity-100 transition-opacity">&larr; Volver a Participación</a>
+                    <h1 class="text-3xl md:text-4xl font-bold mt-2">Formulario de Afiliación</h1>
+                    <p class="text-lg mt-2 opacity-90">Únete a AHORA NACIÓN y sé parte del cambio.</p>
+                </div>
+
+                <!-- Contenedor del Formulario Multi-Step -->
+                <div class="p-8 md:p-12">
+                    
+                    <!-- Barra de Progreso -->
+                    <div class="relative mb-12">
+                        <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-200" style="transform: translateY(-50%);"></div>
+                        <div id="progress-line" class="progress-bar-line absolute top-1/2 left-0 h-1 bg-rojo" style="transform: translateY(-50%); width: 0%;"></div>
+                        <div class="relative flex justify-between">
+                            <div id="progress-step-1" class="progress-bar-step active w-10 h-10 rounded-full bg-blanco border-2 border-gray-200 flex items-center justify-center text-lg font-bold text-gray-400">1</div>
+                            <div id="progress-step-2" class="progress-bar-step w-10 h-10 rounded-full bg-blanco border-2 border-gray-200 flex items-center justify-center text-lg font-bold text-gray-400">2</div>
+                            <div id="progress-step-3" class="progress-bar-step w-10 h-10 rounded-full bg-blanco border-2 border-gray-200 flex items-center justify-center text-lg font-bold text-gray-400">3</div>
+                        </div>
+                    </div>
+
+
+                    <form id="afiliacion-form">
+                        
+                        <!-- Paso 1: Requisitos Previos (Checklist) -->
+                        <div id="form-step-1" class="form-step active">
+                            <h2 class="text-2xl font-bold text-rojo mb-4">I. Requisitos Previos</h2>
+                            <p class="text-gris-oscuro mb-6">Antes de continuar, por favor confirma que cumples con los siguientes requisitos indispensables.</p>
+                            
+                            <div class="space-y-4 text-gris-oscuro">
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-6 h-6 text-rojo flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Tener <strong>mayoría de edad</strong> y gozar de derecho a sufragio.</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-6 h-6 text-rojo flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Declarar bajo juramento <strong>no pertenecer a otra organización política</strong> inscrita.</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-6 h-6 text-rojo flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Haber participado como <strong>simpatizante</strong> por al menos 3 meses (o contar con el aval de dos miembros del CEN).</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 bg-gris-claro p-4 rounded-lg">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" id="confirm-requisitos" class="h-5 w-5 text-rojo rounded border-gray-300 focus:ring-rojo">
+                                    <span class="font-semibold text-gris-oscuro">Confirmo que cumplo con todos los requisitos mencionados.</span>
+                                </label>
+                            </div>
+                            
+                            <div class="flex justify-end mt-8">
+                                <button type="button" id="btn-step-1-next" 
+                                        class="bg-rojo text-blanco text-lg font-semibold px-8 py-3 rounded-lg shadow
+                                               transition-all duration-300
+                                               disabled:bg-gray-300 disabled:cursor-not-allowed"
+                                        disabled>
+                                    Siguiente &rarr;
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Paso 2: Formulario de Solicitud -->
+                        <div id="form-step-2" class="form-step">
+                            <h2 class="text-2xl font-bold text-rojo mb-6">II. Formulario de Solicitud</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Columna de Datos Personales -->
+                                <div>
+                                    <label for="nombres" class="block text-sm font-medium text-gris-oscuro">Nombres Completos</label>
+                                    <input type="text" id="nombres" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rojo focus:ring-rojo" required>
+                                </div>
+                                <div>
+                                    <label for="apellidos" class="block text-sm font-medium text-gris-oscuro">Apellidos Completos</label>
+                                    <input type="text" id="apellidos" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rojo focus:ring-rojo" required>
+                                </div>
+                                <div>
+                                    <label for="dni" class="block text-sm font-medium text-gris-oscuro">DNI</label>
+                                    <input type="text" id="dni" pattern="\d{8}" maxlength="8" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rojo focus:ring-rojo" required>
+                                </div>
+                                <div>
+                                    <label for="fecha_nac" class="block text-sm font-medium text-gris-oscuro">Fecha de Nacimiento</label>
+                                    <input type="date" id="fecha_nac" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rojo focus:ring-rojo" required>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="domicilio" class="block text-sm font-medium text-gris-oscuro">Domicilio (según DNI)</label>
+                                    <input type="text" id="domicilio" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rojo focus:ring-rojo" required>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="comite" class="block text-sm font-medium text-gris-oscuro">Comité Provincial / Distrital (donde presenta solicitud)</label>
+                                    <select id="comite" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rojo focus:ring-rojo" required>
+                                        <option value="">Seleccione un comité...</option>
+                                        <option value="lima-met-1">Lima Metropolitana - Cercado</option>
+                                        <option value="lima-met-2">Lima Metropolitana - Miraflores</option>
+                                        <option value="prov-1">Provincia - Arequipa</option>
+                                        <option value="prov-2">Provincia - Trujillo</option>
+                                        <!-- Agregar más opciones -->
+                                    </select>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="text-lg font-semibold text-gris-oscuro border-b pb-2 mb-3">Aval de Afiliados</h3>
+                                </div>
+                                <div>
+                                    <label for="aval1" class="block text-sm font-medium text-gris-oscuro">DNI Afiliado 1 (o Miembro CEN)</label>
+                                    <input type="text" id="aval1" pattern="\d{8}" maxlength="8" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rojo focus:ring-rojo">
+                                </div>
+                                <div>
+                                    <label for="aval2" class="block text-sm font-medium text-gris-oscuro">DNI Afiliado 2 (o Miembro CEN)</label>
+                                    <input type="text" id="aval2" pattern="\d{8}" maxlength="8" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-rojo focus:ring-rojo">
+                                </div>
+                            </div>
+
+                            <div class="mt-8 bg-gris-claro p-4 rounded-lg">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="checkbox" id="confirm-ideario" class="h-5 w-5 text-rojo rounded border-gray-300 focus:ring-rojo" required>
+                                    <span class="font-semibold text-gris-oscuro">Declaro mi Adhesión al Ideario y Estatuto del partido.</span>
+                                </label>
+                            </div>
+                            
+                            <div class="flex justify-between mt-8">
+                                <button type="button" id="btn-step-2-prev" 
+                                        class="bg-gray-500 text-blanco text-lg font-semibold px-8 py-3 rounded-lg shadow
+                                               hover:bg-gray-600 transition-all duration-300">
+                                    &larr; Anterior
+                                </button>
+                                <button type="button" id="btn-step-2-next" 
+                                        class="bg-rojo text-blanco text-lg font-semibold px-8 py-3 rounded-lg shadow
+                                               hover:bg-guinda transition-all duration-300">
+                                    Siguiente &rarr;
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 3: Proceso de Evaluación -->
+                        <div id="form-step-3" class="form-step">
+                            <h2 class="text-2xl font-bold text-rojo mb-6">III. Proceso de Evaluación</h2>
+                            <p class="text-gris-oscuro mb-10">Gracias por enviar tu solicitud. Esta será evaluada con transparencia. A continuación, te explicamos los pasos y plazos:</p>
+                            
+                            <!-- Diagrama de Flujo Lineal -->
+                            <div class="flex flex-col md:flex-row justify-between text-center gap-8 md:gap-4">
+                                <!-- Etapa 1 -->
+                                <div class="eval-step flex-1">
+                                    <div class="eval-step-content bg-blanco p-6 rounded-lg shadow-lg border-b-4 border-rojo">
+                                        <div class="w-12 h-12 bg-rojo text-blanco rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div>
+                                        <h3 class="font-semibold">Evaluación Territorial</h3>
+                                        <p class="text-sm text-gris-oscuro">El comité territorial correspondiente evaluará tu solicitud y se pronunciará.</p>
+                                    </div>
+                                </div>
+                                <!-- Etapa 2 -->
+                                <div class="eval-step flex-1">
+                                    <div class="eval-step-content bg-blanco p-6 rounded-lg shadow-lg border-b-4 border-rojo">
+                                        <div class="w-12 h-12 bg-rojo text-blanco rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div>
+                                        <h3 class="font-semibold">Decisión Final (SNO)</h3>
+                                        <p class="text-sm text-gris-oscuro">La Secretaría Nacional de Organización (SNO) se pronunciará de forma definitiva.</p>
+                                    </div>
+                                </div>
+                                <!-- Etapa 3 -->
+                                <div class="eval-step flex-1">
+                                    <div class="eval-step-content bg-blanco p-6 rounded-lg shadow-lg border-b-4 border-rojo">
+                                        <div class="w-12 h-12 bg-rojo text-blanco rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
+                                        <h3 class="font-semibold">Apelación (Opcional)</h3>
+                                        <p class="text-sm text-gris-oscuro">Si es improcedente, puedes apelar ante la SNO en un plazo de diez días. Su decisión agota la vía interna.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-12">
+                                <p class="text-xl text-gris-oscuro font-semibold">¡Tu solicitud ha sido recibida!</p>
+                                <p class="text-gris-oscuro mt-2">Nos pondremos en contacto contigo a la brevedad.</p>
+                                <a href="#participacion" 
+                                   class="nav-link inline-block bg-rojo text-blanco text-lg font-semibold px-8 py-3 rounded-lg shadow
+                                          hover:bg-guinda transition-all duration-300 mt-6">
+                                    &larr; Volver a la página principal
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="js/includes.js" defer></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/scroll-animate.js" defer></script>
+  <script src="js/participa.js" defer></script>
+</body>
+</html>

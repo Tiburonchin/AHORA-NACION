@@ -1,0 +1,104 @@
+/* --- 4. Sección Hero (Principal) --- */
+header.hero {
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    background-color: var(--negro);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    overflow: hidden;
+    text-align: center;
+}
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://placehold.co/1920x1080/1A1A1A/E2E8F0?text=Lopez+Chao\n(Foto+Profesional)');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(26, 26, 26, 0.7); /* negro con 70% opacidad */
+}
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 1.5rem;
+}
+.hero-content h1 {
+    font-size: 3rem; /* 48px */
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+}
+.hero-content h1 span {
+    color: var(--rojo);
+}
+.hero-content p {
+    margin-top: 1.5rem;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 300;
+    color: var(--gris-claro);
+    max-width: 48rem; /* 768px */
+}
+.hero-content p span {
+    font-weight: 700;
+    color: var(--blanco);
+}
+.hero-cta {
+    margin-top: 2.5rem;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+.hero-cta:hover {
+    background-color: var(--guinda);
+    transform: scale(1.05);
+}
+@media (min-width: 768px) {
+    .hero-content h1 {
+        font-size: 4.5rem; /* 72px */
+    }
+    .hero-content p {
+        font-size: 1.5rem; /* 24px */
+    }
+}
+
+.hero-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-cta--secondary {
+    background-color: transparent;
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.hero-cta--secondary:hover {
+    background-color: var(--blanco);
+    color: var(--rojo-principal);
+    transform: scale(1.05);
+}

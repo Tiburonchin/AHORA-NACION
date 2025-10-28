@@ -1,0 +1,9 @@
+/* Presencia — mapa interactivo (simple) */
+section.presence { padding:5rem 0; background: linear-gradient(180deg,#fffaf8 0%, #fff 100%); }
+.presence-inner{ max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:1.5rem; }
+@media(min-width:900px){ .presence-inner{ grid-template-columns: 1fr 380px; align-items:center } }
+.map-mock{ background:linear-gradient(180deg,#f7f7f7,#fff); border-radius:12px; padding:1.25rem; box-shadow:0 8px 20px rgba(0,0,0,0.04); min-height:320px; display:flex; align-items:center; justify-content:center; }
+.map-region { padding:.4rem .6rem; border-radius:.5rem; background:rgba(0,0,0,.04); margin:.25rem; cursor:pointer; display:inline-block; }
+.map-info{ background:var(--blanco); padding:1rem; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.04); }
+.map-info h4{ margin:0 0 .5rem 0 }
+.map-info p{ margin:0; color:var(--gris-oscuro); font-size:.95rem }

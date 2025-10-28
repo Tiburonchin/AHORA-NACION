@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Organización — AHORA NACIÓN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/organizacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      body {
+        padding-top: 40px; /* Ajuste para la barra superior fija */
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Header include -->
+    <div data-include="includes/header.html"></div>
+
+    <main class="organizacion-page">
+
+        <!-- Panel inicial con símbolo y datos fundacionales -->
+        <section class="org-hero" aria-labelledby="org-hero-title">
+            <div class="org-hero-card">
+                <div class="org-logo" aria-hidden="false">
+                    <!-- Símbolo accesible: cuadrado rojo con AHORA / NACIÓN y línea -->
+                    <svg role="img" aria-labelledby="logoTitle logoDesc" width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+                        <title id="logoTitle">Símbolo AHORA NACIÓN</title>
+                        <desc id="logoDesc">Cuadrado rojo con letras blancas AHORA NACIÓN y una línea blanca debajo</desc>
+                        <rect width="160" height="160" rx="8" fill="#b10b0b" />
+                        <text x="50%" y="36%" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="22">AHORA</text>
+                        <text x="50%" y="60%" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="20">NACIÓN</text>
+                        <line x1="26" x2="134" y1="110" y2="110" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <div class="org-details">
+                    <h1 id="org-hero-title">Organización — Datos Fundacionales</h1>
+
+                    <dl class="org-data">
+                        <dt>Denominación oficial</dt>
+                        <dd>AHORA NACIÓN - AN</dd>
+
+                        <dt>Tipo y alcance</dt>
+                        <dd>Partido político de alcance nacional, integrado por ciudadanos para participar democráticamente en la República del Perú.</dd>
+
+                        <dt>Fecha de Fundación</dt>
+                        <dd>13 de mayo de 2023</dd>
+
+                        <dt>Domicilio Legal</dt>
+                        <dd>Jirón Isidro Alcíbar 124, Urbanización Ingeniería, Distrito de San Martín de Porres, Lima.</dd>
+
+                        <dt>Duración</dt>
+                        <dd>Indefinida</dd>
+
+                        <dt>Marco Legal</dt>
+                        <dd>Se organiza conforme a la Constitución Política del Perú y la normativa aplicable a las organizaciones políticas.</dd>
+                    </dl>
+
+                    <div class="org-actions">
+                        <a class="btn primary" href="transparencia.html#fundacionales" title="Ir a Transparencia - Documentos Fundacionales">Descargar Documentos Fundacionales</a>
+                        <a class="btn secondary" href="#mapa" title="Ver ubicación en el mapa">Ver ubicación en el mapa</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mapa" class="org-map" aria-label="Mapa de ubicación">
+                <!-- Google Maps embed con búsqueda de la dirección -->
+                <iframe
+                    title="Mapa — Domicilio Legal AHORA NACIÓN"
+                    src="https://www.google.com/maps?q=Jir%C3%B3n+Isidro+Alc%C3%ADbar+124+San+Mart%C3%ADn+de+Porres+Lima&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- I. Datos Fundacionales (texto ampliado) -->
+        <section class="org-section" id="datos-fundacionales">
+            <div class="container">
+                <h2>I. Datos Fundacionales y Generales</h2>
+                <p>Información legal y de contacto del partido, resumen y enlace a los documentos fundacionales en la sección de Transparencia.</p>
+            </div>
+        </section>
+
+        <!-- II. Órganos de Dirección Nacional -->
+        <section class="org-section" id="cen">
+            <div class="container">
+                <h2>II. Órganos de Dirección Nacional — Comité Ejecutivo Nacional (CEN)</h2>
+                <p>El Comité Ejecutivo Nacional (CEN) es el máximo órgano de dirección ejecutiva y de gestión. El primer CEN fue elegido en el acto de fundación por un periodo de 4 años.</p>
+
+                <div class="org-organigram">
+                    <div class="org-presidency">
+                        <h3>Presidencia</h3>
+                        <div class="org-card" data-role="Presidencia">
+                            <div class="org-card-name">LUIS ALFONSO LOPEZ CHAU PASTOR</div>
+                            <button class="dni-toggle" aria-pressed="false">Mostrar DNI</button>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 25839490</div>
+                        </div>
+                    </div>
+
+                    <div class="org-grid" role="list" aria-label="Secretarías Nacionales">
+                        <!-- We'll display the 13 secretarías como tarjetas -->
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">NICOLY SOLEDAD ARAUJO GAMBOA</div>
+                            <div class="org-card-role">Vicepresidencia</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 74994681</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">NÉSTOR DIOSDADO VILLEGAS ALARCÓN</div>
+                            <div class="org-card-role">Secretaría General Nacional</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 75965889</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">BRAYAN AURELIO VALENTÍN DELGADO</div>
+                            <div class="org-card-role">Secretaría Nacional de Organización</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 72889290</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">CARLO MAGNO SALCEDO CUADROS</div>
+                            <div class="org-card-role">Sec. Nacional de Doctrina y Formación Política</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 09679665</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">JOSE MIGUEL MARCELO SALAZAR</div>
+                            <div class="org-card-role">Sec. Nacional de Programa y Plan de Gobierno</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 41840094</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">JOCELYN YULISA PRADO ELISES</div>
+                            <div class="org-card-role">Sec. Nacional de Comunicaciones</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 77022648</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">CÉSAR AUGUSTO HOLGUIN LOAIZA</div>
+                            <div class="org-card-role">Sec. Nacional de Interculturalidad e Identidad</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 43572794</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">GROVER JUAN CORNEJO YANCCE</div>
+                            <div class="org-card-role">Sec. Nacional de Asuntos Jurídicos</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 08671606</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">ÁNGEL RENATO MENESES CRISPÍN</div>
+                            <div class="org-card-role">Sec. Nacional de Economía y Finanzas</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 20595160</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">JOSE GUILLERMO RAMOS ANAHUE</div>
+                            <div class="org-card-role">Sec. Nacional de Juventudes</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 45239690</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">MARÍA CECILIA GEORGINA ESPERANZA ISRAEL LA ROSA</div>
+                            <div class="org-card-role">Sec. Nacional de la Mujer</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 06247499</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">SALVADOR AREVALO LA ROSA</div>
+                            <div class="org-card-role">Sec. Nacional de Industria y Emprendimiento</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 06758848</div>
+                        </div>
+                        <div class="org-card" role="listitem">
+                            <div class="org-card-name">HELARD BLADIMIR SONCO VILLANUEVA</div>
+                            <div class="org-card-role">Sec. Nacional de Descentralización y Movilización</div>
+                            <div class="org-card-dni" aria-hidden="true">DNI: 46307918</div>
+                        </div>
+                    </div>
+
+                    <p class="org-note">Nota: Para publicación web se presentan los nombres. Puede activar 'Mostrar DNI' por motivos de verificación interna.</p>
+                </div>
+
+                <details class="org-gallery" aria-describedby="gal-desc">
+                    <summary>Galería de miembros (clic para abrir)</summary>
+                    <p id="gal-desc">Si dispone de fotografías oficiales, súbalas y se mostrarán aquí. Por defecto, se muestra un marcador.</p>
+                    <div class="gallery-placeholder">Galería: fotos de miembros (pendiente)</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- III. Órganos de Representación -->
+        <section class="org-section" id="organos-representacion">
+            <div class="container">
+                <h2>III. Órganos de Representación — Asamblea General Nacional (AGN)</h2>
+                <p>La Asamblea General Nacional es el órgano máximo representativo, deliberativo y resolutivo. Atribuciones: elegir al CEN, modificar el ideario y estatuto, aprobar fusiones o disolución y conocer estados financieros.</p>
+                <p>Además existen Asambleas Generales Descentralizadas en comités regionales, provinciales y distritales.</p>
+                <div class="org-visual">
+                    <div class="pyramid">
+                        <strong>AGN</strong>
+                        <small>Máxima instancia — Un militante, un voto</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IV. Órganos Autónomos -->
+        <section class="org-section" id="organos-autonomos">
+            <div class="container">
+                <h2>IV. Órganos Autónomos — TEN y TNDE</h2>
+                <div class="org-two-cols">
+                    <article>
+                        <h3>Tribunal Electoral Nacional (TEN)</h3>
+                        <p>Función: máxima autoridad en materia electoral del partido. Conformación inicial (titulares):</p>
+                        <ul>
+                            <li>Presidente: LEANDRO JOSUE GAMEZ RAMOS</li>
+                            <li>Secretario: ROBERTO BETO CACHA SILVA</li>
+                            <li>Vocal: ALEJANDRA DEL PILAR REYES AMEZQUITA</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Tribunal Nacional de Ética y Disciplina (TNDE)</h3>
+                        <p>Función: investigar y sancionar infracciones a la disciplina y ética. Conformación inicial (titulares):</p>
+                        <ul>
+                            <li>Presidente: IVET ZABRINA BARROS PERALES</li>
+                            <li>Secretario: RUBÉN RENATO HUAMANI HUARCAYA</li>
+                            <li>Vocal: EVA LORENZA BONIFACIO PORRAS</li>
+                        </ul>
+                    </article>
+                </div>
+                <p>Se incluyen enlaces a la sección de Disciplina y procedimientos en la página de Transparencia y Reglamentos.</p>
+            </div>
+        </section>
+
+        <!-- V. Órganos Especializados -->
+        <section class="org-section" id="organos-especializados">
+            <div class="container">
+                <h2>V. Órganos Especializados — Gestión Legal y Financiera</h2>
+                <dl>
+                    <dt>Personero Legal Titular</dt>
+                    <dd>ÁNGEL RENATO MENESES CRISPÍN</dd>
+
+                    <dt>Personero Técnico Titular</dt>
+                    <dd>CESAR ABELARDO ROJAS AHUMADA</dd>
+
+                    <dt>Tesorero Titular</dt>
+                    <dd>JACQUELINE DUEÑAS QUISPE</dd>
+
+                    <dt>Representante Legal</dt>
+                    <dd>GROVER JUAN CORNEJO YANCCE</dd>
+
+                    <dt>Apoderado</dt>
+                    <dd>NÉSTOR DIOSDADO VILLEGAS ALARCÓN</dd>
+                </dl>
+                <p class="org-contact-note">Contacto y trámites: utilice la tabla de contactos en la sección de Transparencia para consultas formales y peticiones de información.</p>
+            </div>
+        </section>
+
+        <!-- VI. Órganos Descentralizados y Estrategia Territorial -->
+        <section class="org-section" id="descentralizacion">
+            <div class="container">
+                <h2>VI. Órganos Descentralizados y Estrategia Territorial</h2>
+                <p>Comités Ejecutivos Descentralizados: regionales, provinciales, distritales y en el exterior. Los miembros son elegidos por períodos de 2 años. Se promueve "Todo el poder a las regiones" como lema de descentralización productiva.</p>
+
+                <div class="org-map-regional">
+                    <p>Mapa interactivo (implementación futura): al hacer clic en una región se desplegarán los comités y contactos regionales.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer include -->
+    <div data-include="includes/footer.html"></div>
+
+    <script src="js/includes.js" defer></script>
+    <script src="js/organizacion.js" defer></script>
+</body>

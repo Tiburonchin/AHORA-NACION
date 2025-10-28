@@ -1,0 +1,198 @@
+/* --- 3. Barra de Navegación (Navbar) --- */
+#top-bar {
+    background-color: #1a1a1a;
+    color: var(--blanco);
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 51;
+}
+#top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-links a {
+    color: var(--blanco);
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+.live-link {
+    color: var(--blanco);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#navbar {
+    position: sticky;
+    top: 40px; /* Ajustado para la barra superior */
+    left: 0;
+    right: 0;
+    z-index: 50;
+    transition: all 0.3s ease-in-out;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--blanco);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-logo {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+#nav-logo .brand-square {
+    display: inline-block;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    width: 88px;
+    height: 56px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    text-align: center;
+}
+#nav-logo .brand-line {
+    display: block;
+    line-height: 1;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+#nav-logo .brand-divider {
+    display: block;
+    width: 60%;
+    height: 2px;
+    background: rgba(255,255,255,0.9);
+    margin-top: 4px;
+    border-radius: 1px;
+}
+
+#nav-links {
+    display: none; /* Oculto en móvil */
+}
+@media (min-width: 992px) {
+    #nav-links {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--negro);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    margin-left: 0.25rem;
+    font-size: 0.7rem;
+}
+
+.nav-link:hover {
+    color: var(--rojo);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--blanco);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    z-index: 60;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+#mobile-menu-button {
+    display: block; /* Visible en móvil */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#mobile-menu-button svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--negro);
+}
+
+@media (min-width: 992px) {
+    #mobile-menu-button {
+        display: none;
+    }
+}
+
+/* Mobile: simple toggle behavior hint */
+@media (max-width: 991px) {
+    #nav-links {
+        position: absolute;
+        right: 1.5rem;
+        top: 72px;
+        background: rgba(0,0,0,0.85);
+        padding: 1rem;
+        border-radius: 8px;
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #nav-links.show {
+        display: flex;
+    }
+    #nav-links .nav-link, #nav-links .dropdown-item {
+        color: var(--blanco);
+    }
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+        min-width: auto;
+    }
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: none; /* Desactivar hover en móvil */
+    }
+    .nav-item.dropdown .nav-link.active + .dropdown-menu {
+        display: block;
+    }
+}

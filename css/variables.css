@@ -1,0 +1,36 @@
+/* --- 1. Variables de Color y Globales --- */
+:root {
+    --rojo: #B80000;
+    --negro: #1A1A1A;
+    --guinda: #8B0000;
+    --gris-oscuro: #333333;
+    --gris-claro: #F0F0F0;
+    --blanco: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--gris-claro);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-wrap: balance;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem; /* 24px */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}

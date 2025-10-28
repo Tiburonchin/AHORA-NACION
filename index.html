@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHORA NACIÓN - Lopez Chao</title>
+    
+    <!-- Carga de Fuente (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Cargar un único CSS maestro que importa los parciales -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- FIN DE CSS -->
+    <style>
+      body {
+        padding-top: 40px; /* Ajuste para la barra superior fija */
+      }
+    </style>
+</head>
+<body>
+
+    <!-- 
+      INICIO DE HTML (Estructura)
+    -->
+
+    <!-- NAVBAR (included) -->
+    <div data-include="includes/header.html"></div>
+
+    <!-- SECCIÓN 1: HERO -->
+    <header class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="scroll-animate">
+                <h1>
+                    <span>AHORA</span> ES EL MOMENTO.
+                    <br>
+                    <span>ES TIEMPO DE LA</span> <span>NACIÓN</span>.
+                </h1>
+                
+                <p>
+                    Con el liderazgo de <span>Lopez Chao</span>, recuperaremos el rumbo y construiremos el futuro que merecemos.
+                </p>
+                
+                <a href="#unete" class="hero-cta">
+                    SÚMATE AL CAMBIO
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"></path></svg>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Nuestras nuevas secciones -->
+        <section class="values scroll-animate" id="valores">
+            <div class="container">
+                <div class="values-header">
+                    <h3>Nuestros valores</h3>
+                    <p>Principios que guían cada paso de nuestra campaña.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">A</div>
+                        <h4>Autonomía</h4>
+                        <p>Impulsamos comunidades con poder de decisión local.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">J</div>
+                        <h4>Justicia</h4>
+                        <p>Políticas públicas que priorizan a la gente.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">T</div>
+                        <h4>Transparencia</h4>
+                        <p>Gestión clara y rendición de cuentas permanente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials scroll-animate" id="testimonios">
+            <div class="testimonials-inner">
+                <h3 style="text-align:center">Voces de la gente</h3>
+                <div class="testimonial-slide">
+                    <p class="testimonial-quote">“Ahora Nacion nos devolvió la esperanza en la participación.”</p>
+                    <div class="testimonial-author">María R., vecina</div>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="testimonial-quote">“Su trabajo con organizaciones locales es evidente y sostenido.”</p>
+                    <div class="testimonial-author">Carlos M., activista</div>
+                </div>
+                <div class="testimonials-controls">
+                    <button class="testimonials-prev">‹</button>
+                    <button class="testimonials-next">›</button>
+                </div>
+                <div class="testimonials-dots" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="presence scroll-animate" id="presencia">
+            <div class="presence-inner">
+                <div class="map-mock" aria-hidden="true">
+                    <div>
+                        <div style="text-align:center;margin-bottom:1rem"><strong>Mapa de presencia</strong></div>
+                        <div>
+                            <span class="map-region" data-title="Norte" data-desc="Redes locales en el norte.">Norte</span>
+                            <span class="map-region" data-title="Centro" data-desc="Oficinas en capital y municipios.">Centro</span>
+                            <span class="map-region" data-title="Sur" data-desc="Proyectos comunitarios en el sur.">Sur</span>
+                        </div>
+                    </div>
+                </div>
+                <aside class="map-info">
+                    <h4>Información</h4>
+                    <p>Selecciona una región para ver más detalles.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="timeline scroll-animate" id="timeline">
+            <div class="timeline-track">
+                <h3 style="text-align:center">Nuestra trayectoria</h3>
+                <div class="timeline-items">
+                    <div class="timeline-step">
+                        <h5>2018 — Nacimiento</h5>
+                        <p>Comienzos organizando comunidades locales.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <h5>2020 — Consolidación</h5>
+                        <p>Proyectos de alcance regional y alianzas.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <h5>2024 — Crecimiento</h5>
+                        <p>Campañas municipales y presencia ampliada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq scroll-animate" id="faq">
+            <div class="faq-inner">
+                <h3 style="text-align:center">Preguntas frecuentes</h3>
+                <div class="faq-item">
+                    <div class="faq-question"><h4>¿Cómo puedo afiliarme?</h4><span>+</span></div>
+                    <div class="faq-answer"><p>Visita la sección Afíliate o completa el formulario en la pestaña de participación.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><h4>¿Cómo se financia el movimiento?</h4><span>+</span></div>
+                    <div class="faq-answer"><p>Transparencia en las secciones de donaciones y reportes públicos.</p></div>
+                </div>
+            </div>
+        </section>
+
+    <!-- (footer se inyecta al final de la página) -->
+        <section class="manifesto">
+            <div class="container scroll-animate">
+                <h2>
+                    Estamos cansados de las promesas vacías.
+                    <br>
+                    <span>Es hora de acción decisiva.</span>
+                </h2>
+                <p>
+                    "AHORA NACIÓN" no es un partido tradicional. Somos un movimiento de ciudadanos listos para implementar soluciones reales, con honestidad y capacidad. Dejamos atrás la vieja política para enfocarnos en lo que realmente importa: tu familia, tu trabajo y tu seguridad.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: EL PLAN -->
+        <section id="plan" class="plan">
+            <div class="container">
+                <div class="plan-header scroll-animate">
+                    <span class="subtitle">Nuestro Compromiso</span>
+                    <h2>Un Plan para la Nación</h2>
+                    <p>Nos enfocamos en 4 pilares fundamentales para transformar el país.</p>
+                </div>
+                
+                <div class="plan-grid">
+                    
+                    <div class="plan-card scroll-animate" style="transition-delay: 100ms;">
+                        <div class="plan-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>Seguridad Total</h3>
+                        <p>Tolerancia cero contra la delincuencia. Fortaleceremos a la policía y reformaremos el sistema judicial para que vivas sin miedo.</p>
+                    </div>
+
+                    <div class="plan-card scroll-animate" style="transition-delay: 200ms;">
+                        <div class="plan-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <h3>Economía Próspera</h3>
+                        <p>Menos burocracia, más inversión. Crearemos empleos dignos y apoyaremos a los emprendedores que son el motor del país.</p>
+                    </div>
+
+                    <div class="plan-card scroll-animate" style="transition-delay: 300ms;">
+                        <div class="plan-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        </div>
+                        <h3>Educación de Futuro</h3>
+                        <p>Invertiremos en tecnología para las aulas y capacitaremos a nuestros maestros. Nuestros jóvenes competirán a nivel global.</p>
+                    </div>
+
+                    <div class="plan-card scroll-animate" style="transition-delay: 400ms;">
+                        <div class="plan-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </div>
+                        <h3>Salud Digna</h3>
+                        <p>Hospitales modernos y medicinas al alcance de todos. La salud dejará de ser un privilegio y será un derecho real.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: LOPEZ CHAO -->
+        <section id="lopezchao" class="lopez-chao">
+            <div class="container">
+                <div class="lopez-chao-content">
+                    <div class="lopez-chao-image scroll-animate">
+                        <div>
+                            <img src="https://placehold.co/800x900/1A1A1A/FFFFFF?text=Lopez+Chao\n(Foto+Cercana)" alt="Retrato de Lopez Chao">
+                        </div>
+                    </div>
+                    
+                    <div class="lopez-chao-text scroll-animate" style="transition-delay: 200ms;">
+                        <span class="subtitle">Nuestro Líder</span>
+                        <h2>Conoce a Lopez Chao</h2>
+                        <p>
+                            Lopez Chao no es un político de carrera, es un gestor comprobado. Con más de 20 años de experiencia liderando equipos en el sector privado y un profundo compromiso social, ha decidido volcar su capacidad al servicio de la nación.
+                        </p>
+                        <p>
+                            Padre de familia, profesional y patriota, entiende los problemas del día a día porque los ha vivido. Su visión es clara: un gobierno eficiente, transparente y al servicio de la gente.
+                        </p>
+                        <a href="#" class="lopez-chao-bio-link">
+                            Leer biografía completa
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: LLAMADA A LA ACCIÓN (UNETE) -->
+        <section id="unete" class="cta">
+            <div class="container scroll-animate">
+                <h2>
+                    El cambio eres tú.
+                    <br>
+                    <span>Únete a la Nación.</span>
+                </h2>
+                <p>
+                    Necesitamos tu voz, tu energía y tu compromiso. Regístrate para recibir noticias, participar como voluntario o donar. Este es el momento.
+                </p>
+
+                <form class="cta-form">
+                    <label for="email" class="sr-only">Tu correo electrónico</label>
+                    <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                    
+                    <button type="submit">
+                        ¡Unirme Ahora!
+                    </button>
+                </form>
+                
+                <p class="cta-social-proof">
+                    Ya somos <span>25,182</span> voces creciendo cada día.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (included) -->
+    <div data-include="includes/footer.html"></div>
+    <!-- FIN DE HTML -->
+
+
+    <!-- 
+      INICIO DE JAVASCRIPT (Lógica)
+    -->
+    <!-- JS separado por secciones -->
+    <script src="js/includes.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/scroll-animate.js" defer></script>
+    <script src="js/interactive.js" defer></script>
+    <!-- FIN DE JAVASCRIPT -->
+</body>
+</html>
+

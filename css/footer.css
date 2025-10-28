@@ -1,0 +1,84 @@
+/* --- 9. Footer --- */
+footer {
+    background-color: var(--negro);
+    color: var(--gris-claro);
+    padding: 4rem 0; /* 64px */
+}
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .footer-top {
+        flex-direction: row;
+    }
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .footer-logo {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+.footer-logo a {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 800;
+    text-decoration: none;
+}
+.footer-logo a .logo-rojo {
+    color: var(--rojo);
+}
+.footer-logo a .logo-blanco {
+    color: var(--blanco);
+}
+.footer-logo p {
+    font-size: 0.875rem; /* 14px */
+    margin-top: 0.5rem;
+    color: var(--gris-oscuro);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem; /* 24px */
+}
+.footer-social a {
+    color: var(--gris-claro);
+    transition: color 0.3s;
+}
+.footer-social a:hover {
+    color: var(--blanco);
+}
+.footer-social a svg {
+    width: 28px;
+    height: 28px;
+}
+
+footer hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--gris-oscuro);
+    margin: 2rem 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.875rem; /* 14px */
+    color: var(--gris-oscuro);
+}
+.footer-bottom a {
+    color: var(--gris-oscuro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-bottom a:hover {
+    color: var(--blanco);
+}
+.footer-bottom span {
+    margin: 0 0.5rem;
+}
