@@ -1,271 +1,483 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Organización — AHORA NACIÓN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Organización - AHORA NACIÓN (AN)</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importación de Fuente (Inter, usada por defecto en Tailwind) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/organizacion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-      body {
-        padding-top: 40px; /* Ajuste para la barra superior fija */
-      }
-    </style>
+    
+    
+    <!-- Configuración de Tailwind para colores personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'an-red': '#C51A1B', // Un rojo institucional fuerte
+                        'an-red-dark': '#A01616',
+                        'an-white': '#FFFFFF',
+                        'an-gray': '#F3F4F6',
+                        'an-text': '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        mottoGlow: {
+                            '0%, 100%': { opacity: '1', textShadow: '0 0 5px #FFFFFF' },
+                            '50%': { opacity: '0.8', textShadow: '0 0 15px #FFFFFF' },
+                        }
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 1s ease-out forwards',
+                        slideInUp: 'slideInUp 0.8s ease-out forwards',
+                        mottoGlow: 'mottoGlow 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-an-gray font-sans text-an-text">
 
-    <!-- Header include -->
+    <!-- HEADER (included) -->
     <div data-include="includes/header.html"></div>
 
-    <main class="organizacion-page">
+    <header class="page-hero bg-an-red text-an-white py-20 px-8 text-center overflow-hidden">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 scroll-animate">
+                Nuestra Organización: Nación, Regiones y Transparencia
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light mb-8 animated-motto">
+                <!-- La animación se aplica a los spans vía JS -->
+                <span>"Nación</span> 
+                <span>es</span> 
+                <span>Alma,</span> 
+                <span>es</span> 
+                <span>Espíritu,</span> 
+                <span>es</span> 
+                <span>Meta</span> 
+                <span>Común"</span>
+            </h2>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto scroll-animate" style="transition-delay: 200ms;">
+                AHORA NACIÓN es un <span class="font-bold">"partido-escuela"</span> que propone la formación política ética, democrática y responsable de los ciudadanos para su plena participación en la <span class="font-semibold">Construcción de la nación peruana.</span>
+            </p>
+        </div>
+    </header>
 
-        <!-- Panel inicial con símbolo y datos fundacionales -->
-        <section class="org-hero" aria-labelledby="org-hero-title">
-            <div class="org-hero-card">
-                <div class="org-logo" aria-hidden="false">
-                    <!-- Símbolo accesible: cuadrado rojo con AHORA / NACIÓN y línea -->
-                    <svg role="img" aria-labelledby="logoTitle logoDesc" width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-                        <title id="logoTitle">Símbolo AHORA NACIÓN</title>
-                        <desc id="logoDesc">Cuadrado rojo con letras blancas AHORA NACIÓN y una línea blanca debajo</desc>
-                        <rect width="160" height="160" rx="8" fill="#b10b0b" />
-                        <text x="50%" y="36%" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="22">AHORA</text>
-                        <text x="50%" y="60%" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="20">NACIÓN</text>
-                        <line x1="26" x2="134" y1="110" y2="110" stroke="#fff" stroke-width="6" stroke-linecap="round" />
-                    </svg>
-                </div>
+    <main>
 
-                <div class="org-details">
-                    <h1 id="org-hero-title">Organización — Datos Fundacionales</h1>
+        <!-- SECCIÓN 2: El Modelo Jerárquico Nacional (Rediseñada) -->
+        <section id="jerarquia" class="py-24 px-8 bg-white">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 scroll-animate">La Estructura de la Nación</h2>
+                <p class="text-lg text-gray-600 mb-16 max-w-3xl mx-auto scroll-animate" style="transition-delay: 150ms;">
+                    Nuestra estructura se basa en cuatro tipos de órganos que garantizan la representación, dirección, autonomía y especialización, conectando la base con el liderazgo nacional.
+                </p>
 
-                    <dl class="org-data">
-                        <dt>Denominación oficial</dt>
-                        <dd>AHORA NACIÓN - AN</dd>
+                <!-- Diagrama Rediseñado (3 Columnas) -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start text-left">
+                    
+                    <!-- Columna Izquierda: Órganos Autónomos -->
+                    <div class="space-y-6 scroll-animate" style="transition-delay: 300ms;">
+                        <h3 class="text-xl font-bold text-center text-an-red mb-6">C. Órganos Autónomos</h3>
+                        <div class="border-l-4 border-dashed border-gray-400 pl-6 space-y-6">
+                            <div class="org-node" data-tooltip-text="Garantiza la transparencia, imparcialidad y legalidad de todos los procesos electorales internos del partido.">
+                                <span class="font-semibold text-lg">Tribunal Electoral Nacional (TEN)</span>
+                                <div class="tooltip">Garantiza la transparencia, imparcialidad y legalidad de todos los procesos electorales internos del partido.</div>
+                            </div>
+                            <div class="org-node" data-tooltip-text="Encargado de aplicar sanciones y resolver en última y definitiva instancia, velando por la conducta ética.">
+                                <span class="font-semibold text-lg">Tribunal Nacional de Ética y Disciplina</span>
+                                <div class="tooltip">Encargado de aplicar sanciones y resolver en última y definitiva instancia, velando por la conducta ética.</div>
+                            </div>
+                        </div>
+                    </div>
 
-                        <dt>Tipo y alcance</dt>
-                        <dd>Partido político de alcance nacional, integrado por ciudadanos para participar democráticamente en la República del Perú.</dd>
+                    <!-- Columna Central: Espina Principal (Representación y Dirección Ejecutiva) -->
+                    <div class="space-y-6 scroll-animate" style="transition-delay: 100ms;">
+                        <div class="border-l-4 border-an-red pl-6 space-y-6">
+                            <h3 class="text-xl font-bold text-center text-an-red mb-6 -ml-6">A. Órganos de Representación</h3>
+                            <div class="org-node" data-tooltip-text="Máximo órgano representativo del partido. Tiene carácter deliberativo y resolutivo sobre la línea política y la gestión del partido.">
+                                <span class="font-semibold text-lg">Asamblea General Nacional</span>
+                                <div class="tooltip">Máximo órgano representativo del partido. Tiene carácter deliberativo y resolutivo sobre la línea política y la gestión del partido.</div>
+                            </div>
+                            <div class="org-node" data-tooltip-text="Expresan la voluntad de los afiliados en sus respectivos territorios, asegurando la descentralización.">
+                                <span class="font-semibold text-lg">Asambleas Generales Descentralizadas</span>
+                                <div class="tooltip">Expresan la voluntad de los afiliados en sus respectivos territorios, asegurando la descentralización.</div>
+                            </div>
 
-                        <dt>Fecha de Fundación</dt>
-                        <dd>13 de mayo de 2023</dd>
+                            <h3 class="text-xl font-bold text-center text-an-red mb-6 mt-12 -ml-6">B. Órganos de Dirección (Ejecutivos)</h3>
+                            <div class="org-node cen-node border-an-red border-2 shadow-lg" data-tooltip-text="Máximo órgano de dirección ejecutiva y de gestión del partido. Coordina, supervisa y ejecuta la política nacional.">
+                                <span class="font-bold text-xl text-an-red">Comité Ejecutivo Nacional (CEN)</span>
+                                <p class="text-sm text-gray-600 mt-2">Máximo órgano de dirección ejecutiva y de gestión.</p>
+                                <div class="tooltip">Máximo órgano de dirección ejecutiva y de gestión del partido. Coordina, supervisa y ejecuta la política nacional.</div>
+                            </div>
+                            <div class="org-node" data-tooltip-text="Ejecutan las directivas del CEN en las regiones, provincias y distritos.">
+                                <span class="font-semibold text-lg">Comités Ejecutivos Descentralizados</span>
+                                <div class="tooltip">Ejecutan las directivas del CEN en las regiones, provincias y distritos.</div>
+                            </div>
+                        </div>
+                    </div>
 
-                        <dt>Domicilio Legal</dt>
-                        <dd>Jirón Isidro Alcíbar 124, Urbanización Ingeniería, Distrito de San Martín de Porres, Lima.</dd>
+                    <!-- Columna Derecha: Dirección Política y Especializados -->
+                    <div class="space-y-6 scroll-animate" style="transition-delay: 500ms;">
+                        <h3 class="text-xl font-bold text-center text-an-red mb-6">B. Órganos de Dirección (Políticos)</h3>
+                        <div class="border-l-4 border-gray-400 pl-6 space-y-6">
+                            <div class="org-node" data-tooltip-text="Máxima autoridad de representación política, administrativa e institucional del partido.">
+                                <span class="font-semibold text-lg">Presidencia</span>
+                                <div class="tooltip">Máxima autoridad de representación política, administrativa e institucional del partido.</div>
+                            </div>
+                            <div class="org-node" data-tooltip-text="Órgano de dirección política que articula la acción del partido a nivel nacional y regional.">
+                                <span class="font-semibold text-lg">Comité Político Nacional Descentralizado</span>
+                                <div class="tooltip">Órgano de dirección política que articula la acción del partido a nivel nacional y regional.</div>
+                            </div>
+                        </div>
 
-                        <dt>Duración</dt>
-                        <dd>Indefinida</dd>
-
-                        <dt>Marco Legal</dt>
-                        <dd>Se organiza conforme a la Constitución Política del Perú y la normativa aplicable a las organizaciones políticas.</dd>
-                    </dl>
-
-                    <div class="org-actions">
-                        <a class="btn primary" href="transparencia.html#fundacionales" title="Ir a Transparencia - Documentos Fundacionales">Descargar Documentos Fundacionales</a>
-                        <a class="btn secondary" href="#mapa" title="Ver ubicación en el mapa">Ver ubicación en el mapa</a>
+                        <h3 class="text-xl font-bold text-center text-an-red mb-6 mt-12">D. Órganos Especializados</h3>
+                        <div class="border-l-4 border-dotted border-gray-400 pl-6 space-y-6">
+                            <div class="org-node" data-tooltip-text="Vinculada a la S.N. de Asuntos Jurídicos. Ejerce la representación legal y defensa del partido.">
+                                <span class="font-semibold text-lg">Personería Legal y Técnica</span>
+                                <div class="tooltip">Vinculada a la S.N. de Asuntos Jurídicos. Ejerce la representación legal y defensa del partido.</div>
+                            </div>
+                            <div class="org-node" data-tooltip-text="Vinculada a la S.N. de Economía y Finanzas. Administra los recursos económicos con transparencia.">
+                                <span class="font-semibold text-lg">Tesorería</span>
+                                <div class="tooltip">Vinculada a la S.N. de Economía y Finanzas. Administra los recursos económicos con transparencia.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="mapa" class="org-map" aria-label="Mapa de ubicación">
-                <!-- Google Maps embed con búsqueda de la dirección -->
-                <iframe
-                    title="Mapa — Domicilio Legal AHORA NACIÓN"
-                    src="https://www.google.com/maps?q=Jir%C3%B3n+Isidro+Alc%C3%ADbar+124+San+Mart%C3%ADn+de+Porres+Lima&output=embed"
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
-        <!-- I. Datos Fundacionales (texto ampliado) -->
-        <section class="org-section" id="datos-fundacionales">
-            <div class="container">
-                <h2>I. Datos Fundacionales y Generales</h2>
-                <p>Información legal y de contacto del partido, resumen y enlace a los documentos fundacionales en la sección de Transparencia.</p>
-            </div>
-        </section>
-
-        <!-- II. Órganos de Dirección Nacional -->
-        <section class="org-section" id="cen">
-            <div class="container">
-                <h2>II. Órganos de Dirección Nacional — Comité Ejecutivo Nacional (CEN)</h2>
-                <p>El Comité Ejecutivo Nacional (CEN) es el máximo órgano de dirección ejecutiva y de gestión. El primer CEN fue elegido en el acto de fundación por un periodo de 4 años.</p>
-
-                <div class="org-organigram">
-                    <div class="org-presidency">
-                        <h3>Presidencia</h3>
-                        <div class="org-card" data-role="Presidencia">
-                            <div class="org-card-name">LUIS ALFONSO LOPEZ CHAU PASTOR</div>
-                            <button class="dni-toggle" aria-pressed="false">Mostrar DNI</button>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 25839490</div>
-                        </div>
-                    </div>
-
-                    <div class="org-grid" role="list" aria-label="Secretarías Nacionales">
-                        <!-- We'll display the 13 secretarías como tarjetas -->
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">NICOLY SOLEDAD ARAUJO GAMBOA</div>
-                            <div class="org-card-role">Vicepresidencia</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 74994681</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">NÉSTOR DIOSDADO VILLEGAS ALARCÓN</div>
-                            <div class="org-card-role">Secretaría General Nacional</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 75965889</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">BRAYAN AURELIO VALENTÍN DELGADO</div>
-                            <div class="org-card-role">Secretaría Nacional de Organización</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 72889290</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">CARLO MAGNO SALCEDO CUADROS</div>
-                            <div class="org-card-role">Sec. Nacional de Doctrina y Formación Política</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 09679665</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">JOSE MIGUEL MARCELO SALAZAR</div>
-                            <div class="org-card-role">Sec. Nacional de Programa y Plan de Gobierno</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 41840094</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">JOCELYN YULISA PRADO ELISES</div>
-                            <div class="org-card-role">Sec. Nacional de Comunicaciones</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 77022648</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">CÉSAR AUGUSTO HOLGUIN LOAIZA</div>
-                            <div class="org-card-role">Sec. Nacional de Interculturalidad e Identidad</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 43572794</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">GROVER JUAN CORNEJO YANCCE</div>
-                            <div class="org-card-role">Sec. Nacional de Asuntos Jurídicos</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 08671606</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">ÁNGEL RENATO MENESES CRISPÍN</div>
-                            <div class="org-card-role">Sec. Nacional de Economía y Finanzas</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 20595160</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">JOSE GUILLERMO RAMOS ANAHUE</div>
-                            <div class="org-card-role">Sec. Nacional de Juventudes</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 45239690</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">MARÍA CECILIA GEORGINA ESPERANZA ISRAEL LA ROSA</div>
-                            <div class="org-card-role">Sec. Nacional de la Mujer</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 06247499</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">SALVADOR AREVALO LA ROSA</div>
-                            <div class="org-card-role">Sec. Nacional de Industria y Emprendimiento</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 06758848</div>
-                        </div>
-                        <div class="org-card" role="listitem">
-                            <div class="org-card-name">HELARD BLADIMIR SONCO VILLANUEVA</div>
-                            <div class="org-card-role">Sec. Nacional de Descentralización y Movilización</div>
-                            <div class="org-card-dni" aria-hidden="true">DNI: 46307918</div>
-                        </div>
-                    </div>
-
-                    <p class="org-note">Nota: Para publicación web se presentan los nombres. Puede activar 'Mostrar DNI' por motivos de verificación interna.</p>
-                </div>
-
-                <details class="org-gallery" aria-describedby="gal-desc">
-                    <summary>Galería de miembros (clic para abrir)</summary>
-                    <p id="gal-desc">Si dispone de fotografías oficiales, súbalas y se mostrarán aquí. Por defecto, se muestra un marcador.</p>
-                    <div class="gallery-placeholder">Galería: fotos de miembros (pendiente)</div>
-                </details>
-            </div>
-        </section>
-
-        <!-- III. Órganos de Representación -->
-        <section class="org-section" id="organos-representacion">
-            <div class="container">
-                <h2>III. Órganos de Representación — Asamblea General Nacional (AGN)</h2>
-                <p>La Asamblea General Nacional es el órgano máximo representativo, deliberativo y resolutivo. Atribuciones: elegir al CEN, modificar el ideario y estatuto, aprobar fusiones o disolución y conocer estados financieros.</p>
-                <p>Además existen Asambleas Generales Descentralizadas en comités regionales, provinciales y distritales.</p>
-                <div class="org-visual">
-                    <div class="pyramid">
-                        <strong>AGN</strong>
-                        <small>Máxima instancia — Un militante, un voto</small>
-                    </div>
+        <!-- SECCIÓN 3: El Comité Ejecutivo Nacional (CEN) -->
+        <section id="cen" class="py-24 px-8 bg-an-gray">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-animate">Comité Ejecutivo Nacional (CEN)</h2>
+                <p class="text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto scroll-animate" style="transition-delay: 150ms;">
+                    Liderazgo fundacional elegido por un periodo de 4 años, comprometido con la ética, la formación y la construcción de la nación.
+                </p>
+                
+                <!-- Contenedor de la Galería Ejecutiva -->
+                <div id="cen-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Las tarjetas de miembros se generarán aquí por JavaScript -->
                 </div>
             </div>
         </section>
 
-        <!-- IV. Órganos Autónomos -->
-        <section class="org-section" id="organos-autonomos">
-            <div class="container">
-                <h2>IV. Órganos Autónomos — TEN y TNDE</h2>
-                <div class="org-two-cols">
-                    <article>
-                        <h3>Tribunal Electoral Nacional (TEN)</h3>
-                        <p>Función: máxima autoridad en materia electoral del partido. Conformación inicial (titulares):</p>
-                        <ul>
-                            <li>Presidente: LEANDRO JOSUE GAMEZ RAMOS</li>
-                            <li>Secretario: ROBERTO BETO CACHA SILVA</li>
-                            <li>Vocal: ALEJANDRA DEL PILAR REYES AMEZQUITA</li>
+        <!-- SECCIÓN 4: Descentralización y Poder Regional -->
+        <section id="descentralizacion" class="py-24 px-8 bg-gradient-to-br from-an-red via-an-red-dark to-red-900 text-an-white overflow-hidden relative">
+            <!-- Elementos decorativos de fondo -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 right-10 w-48 h-48 bg-an-white rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+                        <svg class="w-5 h-5 mr-2 text-an-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Estructura Territorial</span>
+                    </div>
+                    <h2 class="text-6xl md:text-8xl font-black mb-6 scroll-animate" style="text-shadow: 3px 3px 12px rgba(0,0,0,0.3); background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        "Todo el poder a las regiones"
+                    </h2>
+                    <p class="text-xl text-an-white/90 font-light mb-12 max-w-4xl mx-auto scroll-animate" style="transition-delay: 150ms;">
+                        Creemos en la descentralización como la estrategia nacional más eficiente para desatar la competitividad y el potencial de nuestra nación.
+                    </p>
+                </div>
+
+                <!-- Estadísticas destacadas -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center scroll-animate border border-white/20 hover:bg-white/15 transition-all duration-300">
+                        <div class="text-3xl font-bold mb-2">25</div>
+                        <div class="text-sm text-an-white/80">Regiones</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center scroll-animate border border-white/20 hover:bg-white/15 transition-all duration-300" style="transition-delay: 100ms;">
+                        <div class="text-3xl font-bold mb-2">196</div>
+                        <div class="text-sm text-an-white/80">Provincias</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center scroll-animate border border-white/20 hover:bg-white/15 transition-all duration-300" style="transition-delay: 200ms;">
+                        <div class="text-3xl font-bold mb-2">1,874</div>
+                        <div class="text-sm text-an-white/80">Distritos</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center scroll-animate border border-white/20 hover:bg-white/15 transition-all duration-300" style="transition-delay: 300ms;">
+                        <div class="text-3xl font-bold mb-2">100%</div>
+                        <div class="text-sm text-an-white/80">Cobertura Nacional</div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 gap-8 items-center">
+                    <!-- Columna de Información -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-an-white rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-an-red" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h4a2 2 0 110 4H8a2 2 0 01-2-2z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold">Comités Ejecutivos Descentralizados (CED)</h3>
+                            </div>
+                            <p class="text-an-white/90 leading-relaxed mb-6">
+                                Nuestra estructura se replica en todo el territorio a través de Comités Regionales, Provinciales, Distritales y de Peruanos en el Exterior, asegurando que las decisiones se tomen cerca del ciudadano.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center p-4 bg-white/10 rounded-xl">
+                                    <div class="text-2xl font-bold text-an-white">25</div>
+                                    <div class="text-sm text-an-white/70">Regionales</div>
+                                </div>
+                                <div class="text-center p-4 bg-white/10 rounded-xl">
+                                    <div class="text-2xl font-bold text-an-white">196</div>
+                                    <div class="text-sm text-an-white/70">Provinciales</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-an-white/20 to-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/30">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-an-white rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-an-red" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold">Paridad y Representación</h4>
+                            </div>
+                            <p class="text-an-white/90 leading-relaxed">
+                                En los comités regionales, los cargos de <span class="font-bold text-an-white">Secretario General</span> y <span class="font-bold text-an-white">Subsecretario General</span> deben ser de distinto sexo. La lista completa debe estar compuesta por mitad hombres y mitad mujeres, garantizando la participación plena.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Columna del Mapa Interactivo -->
+                    <div class="lg:col-span-3 scroll-animate" style="transition-delay: 450ms;">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                            <div class="text-center mb-6">
+                                <h4 class="text-2xl font-bold mb-2 flex items-center justify-center">
+                                    <svg class="w-6 h-6 mr-3 text-an-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Mapa Interactivo del Perú
+                                </h4>
+                                <p class="text-an-white/80 font-semibold">Haz clic en una región para ver su estructura detallada</p>
+                            </div>
+
+                            <div class="map-container bg-gradient-to-br from-an-white/20 to-white/5 p-6 rounded-2xl shadow-2xl relative border border-white/20">
+                                <!-- Tooltip flotante -->
+                                <div id="region-tooltip" class="region-tooltip"></div>
+                            <!-- 
+                              SVG del Mapa del Perú
+                              Este es un SVG simplificado. data-name contiene el nombre para el modal.
+                            -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1285" aria-label="Mapa interactivo del Perú dividido por regiones" role="img">
+                              <defs>
+                                <linearGradient id="regionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                  <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+                                  <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:0.3" />
+                                </linearGradient>
+                                <linearGradient id="hoverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                  <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+                                  <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:0.8" />
+                                </linearGradient>
+                              </defs>
+                              <path class="region-path" data-name="Loreto" tabindex="0" d="m402 466-66-100-38 31-29 66-9 41 40 8 20 45 42-20 6-39 12-23 22-17z m-121-68-18-20-38 11-13 18 20 28 49-37z m163 103-6 26-32 35-49 9 20 54 27 16 11 32 37 8 21 27 34-19 12-45-74-39z m-56 128-28 17 8 71 52 35 34-22 9-54-32-26-43-21z m-126 12-14 36-40-10-27 21 16 33 22 25 25 15 32-51-14-69z m-79-11 5 46-34 31-24-34 16-33-27-21-22 5 2-30 42 1 42-14z m92 108-16 67-32 51-14-5 1 21-12 11-28 7-23-4-15-28 8-40 46-49 43 14 36-15z m-63 118-46 49-20 7-10 19-32 15-25 3-10-31-4-23 20-36 29-13 11-18 42-26 44 53z m95 72-36 15 1 21-12 11-28 7-23-4-15-28-11 3-9 22 23 23 15 48 31 16 48-26z m55 83-31-16-15-48-23-23 9-22 11-3 15 28 4-8 10 7 23 5 43-41 12 19 36 24 16 22z m-16-105-10-7-4 8-15-28-4-8-2 6 2 21-1-21 14 5 32-51 16-67 36 15-48 26z m8 160-43 41-23-5-10-7-2-21-2-6 11 3-1-3 2-2 11-1 7-5 13 1 12 10 32 16 3-12 21-16z m18-19-12-19-43 41 2 21-11-3 1 3-2 2-11 1-7 5-13 1-12-10-32-16-3 12-21 16 4 1-1-1 1-2 13 10 10 16 18-5 14-8 14-25 10-10 5-11 10-20z m100 13-14 8-18 5-10-16-13-10 1 1 1-1-4-1 1-16 21 16-3-12-32-16-12-10-13-1-7 5-11 1 2-2-1-3 11-3-2-21 43-41-12-19-36-24-16-22 25 15 13 22 28 9z m-75 125-28-9-13-22-25-15 16-22-36-24-12-19 33-28 41 21 21 47 3-11z m21 68-3-11-21-47-41-21 33-28 12-19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25-13 25-1 11-13 24 18 10 19z m25-86-7-14-12 19 36 24-16 22-7-14z m63-22-36-29-7-14 16-22-28-9-13-22-25-15 14-8 18-5-10-16-13-10 10-20-5 11-10 10-14 25-10 10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20 21z m-41 120-1-18-36-29 7-14 16 22-25 15-13 22 28 9 14 8z m-28-76 12 5-7-12-1-18z m-12-68-31 31-15 23-25 13-25 1-11 13-24-18-10-19-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21-27-10-41 13-11-11 16-22 35-1 10 10 16 27 21 25 13 4 19 33 28z m1 129-33-28-4-19-25-13-27-21-10-10-35 1-16 22-11 11 19 23 27 28 20 23 37 13 41 11 31-11z m-59 86-31 11-41-11-37-13-20-23-27-28-19-23 26-28 32-15 29 16 35 21 17 26 18 13z m-53-48-29-16-32 15-26 28 19 23-11-11-16-22-35-1 10-10 16-27 21-25 13-4-19 33-28 12-19 7 14z m10-191 10 10-16 27-21 25-13-4-19 33-28 12-19-7-14 36-29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1z m-55 125 11-11-19-23-27-28-20-23-37-13-41-11-31 11 6 9 37 8 23 15 28 32 35 31z m-45 15-35-31-28-32-23-15-37-8-6-9-27 5-29 16 11 12 19 8 16 25 21 16 34 39 31 11z m-35 48-31-11-34-39-21-16-16-25-19-8-11-12 29-16 27-5 29 14 36 21 27 16z m-35 52-27-16-36-21-29-14 27-5-10-16-36 10-25 22-14 26 5 19 33 22 36 12 40 4z m-41 40-40-4-36-12-33-22-5-19 14-26 25-22 36-10 10 16 27 5 10 14 31 12 26-10z m-16 31-26 10-31-12-10-14-27-5 21-17 19-30 14-25 26-5 31 17 23 30z m-43-15-23-30-31-17-26 5-14 25-19 30-21 17 36-10 25-22 14-26 16-5 30 18 20 28z m1 48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36-10-25-22-14-26 16-5 30 18 20 28z m114-633-42 14-5-46 34-31 24 34-16 33 27 21 22-5-2 30z m-10 119 14 69-32 51-25-15-22-25-16-33 27-21 40 10z m67 251-44-53-42 26-11 18-29 13-20 36 4 23 10 31 25-3 32-15 10-19 20-7 46-49 36-14z m-22 165-43-14-46 49 8 40 15 28 23 4 28-7 12-11 1-21 14-5 32-51-16-67z m274-219-12 45 74 39-12 55-23 27-46 4-34 19-21-27-37-8-11-32-27-16-20-54 49-9 32-35 6-26 42 20-6 39-12 23-22 17-40-8-9-41 29-66 38-31 66 100 11 8z m-115 163 43 21 32 26-9 54 34 22-52-35-8-71 28-17-10-32z m47 151 10-32-28-17-8 71 52 35-34-22 9-54 32-26 43-21 28-17 10 32-16 67-36 15 48-26-31 16-15-48-23-23 9-22 11-3 15 28 4-8 10 7 23 5 43-41 12 19z m23 155-12-19 36-24 16 22-25 15-13 22z m-16-22 25-15-16-22 7-14-36-29-1 18-7 12 12-5z m66-22-12-5 7 12 1 18 36 29-7 14-16-22 25-15 13-22-28-9-14-8 18-5 10-16 13-10-10 20 5-11 10-10-14 25-10 10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20-21z m-41 120 14-8-28-9-13 22-25 15 16-22 7 14 36 29 1 18z m-25-86-12 19 36 24-16 22-7-14z m92-13-10-19-24 18 11-13 25-1 25 13 15-23 31 31-12 5z m-26 86 10 19-20-1-18-10-15-28-34-22-36 21-10 25-16 9-20-21-27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18z m-21-68 3-11 21-47 41-21-33 28-12 19-7-14-36-29-1-18-7-12-12 5 31-31 15-23 25 13 25 1 11-13 24 18 10 19 20-1 18-10 15-28 34-22 36-21 10-25 16-9 20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28z m1-129-33-28-4-19-25-13-27-21-10-10-35 1-16 22-11 11 19 23 27 28 20 23 37 13 41 11 31-11-6-9-37-8-23-15-28-32-35-31 29-16-11-12-19-8-16-25-21-16-34-39-31-11 27-5 29 16 35 21 17 26 18 13z m-24-134 29-16 32-15 26 28-19 23 11-11 16-22 35 1-10 10-16 27-21 25-13-4-19 33-28 12-19-33 28z m53 48 35-21-17-26-18-13-35 31 28 32 23 15 37 8 6 9z m-35-48-28-32-23-15-37-8-6-9-27 5-29 16 11 12 19 8 16 25 21 16 34 39 31 11z m35 48-31-11-34-39-21-16-16-25-19-8-11-12 29-16 27-5 29 14 36 21 27 16z m-35 52-27-16-36-21-29-14 27-5-10-16-36 10-25 22-14 26 5 19 33 22 36 12 40 4-10-14-31-12-26 10 16-5 30 18 20 28-14 26-25 22 36 10z m-41 40-40-4-36-12-33-22-5-19 14-26 25-22 36-10 10 16 27 5 10 14 31 12 26-10-16-5-30-18-20-28 14-26 25 22 36 10z m-16 31-26 10-31-12-10-14-27-5 21-17 19-30 14-25 26-5 31 17 23 30-14 25-19 30-21 17 36-10-25-22-14-26 16-5 30 18 20 28z m-43-15-23-30-31-17-26 5-14 25-19 30-21 17 36-10 25-22 14-26 16-5 30 18 20 28z m1-48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36 10-25 22-14 26 16-5 30 18 20 28z m-269-633 42 1 2-30-22 5-27-21 16-33 24 34 34-31z m-47 119-40 10 14-36-12 1-1 3-2-1z m93 108 12 1-14-36 27-21-16 33z m-38 128 36-14-43-14-46 49 8 40 15 28 23 4 28-7 12-11 1-21-12 1-1 3 2-1z m-51 118-36 15 16 67-32 51-14-5 1 21-12 11-28 7-23-4-15-28 11-3-1 3-2-1 2-21z m16 105-1-21 12-11 28-7 23 4 15 28 11 3 1-3 2 1 2 21-11 3z m23 23-11-3-1 3 2 1 2 21-11 3 9 22-23 23-15 48-31 16 48-26z m55 83-48 26-31-16-15-48 23-23-9-22-11 3 1-3 2 1 2 21-11 3 1-3 2 2 11 1 7-5 13 1 12 10 32 16 3-12 21-16 4 1-1-1 1-2 13 10 10 16 18-5 14-8 14-25 10-10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18 10 19z m-16 83 12 19 43-41-2 21-11-3 1 3-2 2-11 1-7 5-13 1-12-10-32-16-3 12-21 16-4-1-1 1-1 2-13-10-10-16-18 5-14 8-14 25-10-10-5-11-10 20-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18 10 19z m25-86-10 19 24-18 11 13-25-1z m-41 120-14 8-18 5-10-16-13-10 1 1 1-1-4-1 1-16 21 16-3-12-32-16-12-10-13-1-7 5-11 1 2-2-1-3 11-3-2-21 43-41-12-19-36-24-16-22 25 15 13 22 28 9z m-75 125-28-9-13-22-25-15 16-22-36-24-12 19 33 28 41 21 21 47 3-11z m21 68-3-11-21-47-41-21 33-28 12-19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25-13 25-1 11 13 24-18 10 19z m25-86-7-14-12 19 36 24-16 22-7-14z m63-22-36-29-7-14 16-22-28-9-13-22-25-15 14-8 18-5-10-16-13-10 10-20-5 11-10 10-14 25-10 10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20 21z m-41 120-1-18-36-29 7-14 16 22-25 15-13 22 28 9 14 8z m-28-76 12 5-7-12-1-18z m-12-68-31 31-15 23-25 13-25 1-11 13-24-18-10-19-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21-27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28z m1 129-33-28-4-19-25-13-27-21-10-10-35 1-16 22-11 11 19 23 27 28 20 23 37 13 41 11 31-11z m-59 86-31 11-41-11-37-13-20-23-27-28-19-23 26-28 32-15 29 16 35 21 17 26 18 13z m-53-48-29-16-32 15-26 28 19 23-11-11-16-22-35-1 10-10 16-27 21-25 13-4-19 33-28 12-19 7 14z m10-191 10 10-16 27-21 25-13-4-19 33-28 12-19-7-14 36-29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1z m-55 125 11-11-19-23-27-28-20-23-37-13-41-11-31 11 6 9 37 8 23 15 28 32 35 31z m-45 15-35-31-28-32-23-15-37-8-6-9-27 5-29 16 11 12 19 8 16 25 21 16 34 39 31 11z m-35 48-31-11-34-39-21-16-16-25-19-8-11-12 29-16 27-5 29 14 36 21 27 16z m-35 52-27-16-36-21-29-14 27-5-10-16-36 10-25 22-14 26 5 19 33 22 36 12 40 4z m-41 40-40-4-36-12-33-22-5-19 14-26 25-22 36-10 10 16 27 5 10 14 31 12 26-10z m-16 31-26 10-31-12-10-14-27-5 21-17 19-30 14-25 26-5 31 17 23 30z m-43-15-23-30-31-17-26 5-14 25-19 30-21 17 36-10 25-22 14-26 16-5 30 18 20 28z m1-48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36 10-25 22-14 26 16-5 30 18 20 28z m-269-633 42 1 2-30-22 5-27-21 16-33 24 34 34-31z m-47 119-40 10 14-36-12 1-1 3-2-1z m93 108 12 1-14-36 27-21-16 33z m-38 128 36-14-43-14-46 49 8 40 15 28 23 4 28-7 12-11 1-21-12 1-1 3 2-1z m-51 118-36 15 16 67-32 51-14-5 1 21-12 11-28 7-23-4-15-28 11-3-1 3-2-1 2-21z m16 105-1-21 12-11 28-7 23 4 15 28 11 3 1-3 2 1 2 21-11 3z m23 23-11-3-1 3 2 1 2 21-11 3 9 22-23 23-15 48-31 16 48-26z m55 83-48 26-31-16-15-48 23-23-9-22-11 3 1-3 2 1 2 21-11 3 1-3 2 2 11 1 7-5 13 1 12 10 32 16 3-12 21-16 4 1-1-1 1-2 13 10 10 16 18-5 14-8 14-25 10-10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18 10 19z m-16 83 12 19 43-41-2 21-11-3 1 3-2 2-11 1-7 5-13 1-12-10-32-16-3 12-21 16-4-1-1 1-1 2-13-10-10-16-18 5-14 8-14 25-10-10-5-11-10 20-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18 10 19z m25-86-10 19 24-18 11 13-25-1z m-41 120-14 8-18 5-10-16-13-10 1 1 1-1-4-1 1-16 21 16-3-12-32-16-12-10-13-1-7 5-11 1 2-2-1-3 11-3-2-21 43-41-12-19-36-24-16-22 25 15 13 22 28 9z m-75 125-28-9-13-22-25-15 16-22-36-24-12 19 33 28 41 21 21 47 3-11z m21 68-3-11-21-47-41-21 33-28 12-19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25-13 25-1 11 13 24-18 10 19z m25-86-7-14-12 19 36 24-16 22-7-14z m63-22-36-29-7-14 16-22-28-9-13-22-25-15 14-8 18-5-10-16-13-10 10-20-5 11-10 10-14 25-10 10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20 21z m-41 120-1-18-36-29 7-14 16 22-25 15-13 22 28 9 14 8z m-28-76 12 5-7-12-1-18z m-12-68-31 31-15 23-25 13-25 1-11 13-24-18-10-19-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21-27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28z m1 129-33-28-4-19-25-13-27-21-10-10-35 1-16 22-11 11 19 23 27 28 20 23 37 13 41 11 31-11z m-59 86-31 11-41-11-37-13-20-23-27-28-19-23 26-28 32-15 29 16 35 21 17 26 18 13z m-53-48-29-16-32 15-26 28 19 23-11-11-16-22-35-1 10-10 16-27 21-25 13-4-19 33-28 12-19 7 14z m10-191 10 10-16 27-21 25-13-4-19 33-28 12-19-7-14 36-29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1z m-55 125 11-11-19-23-27-28-20-23-37-13-41-11-31 11 6 9 37 8 23 15 28 32 35 31z m-45 15-35-31-28-32-23-15-37-8-6-9-27 5-29 16 11 12 19 8 16 25 21 16 34 39 31 11z m-35 48-31-11-34-39-21-16-16-25-19-8-11-12 29-16 27-5 29 14 36 21 27 16z m-35 52-27-16-36-21-29-14 27-5-10-16-36 10-25 22-14 26 5 19 33 22 36 12 40 4z m-41 40-40-4-36-12-33-22-5-19 14-26 25-22 36-10 10 16 27 5 10 14 31 12 26-10z m-16 31-26 10-31-12-10-14-27-5 21-17 19-30 14-25 26-5 31 17 23 30z m-43-15-23-30-31-17-26 5-14 25-19 30-21 17 36-10 25-22 14-26 16-5 30 18 20 28z m1-48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36 10-25 22-14 26 16-5 30 18 20 28z m-269-633 42 1 2-30-22 5-27-21 16-33 24 34 34-31z m-47 119-40 10 14-36-12 1-1 3-2-1z m93 108 12 1-14-36 27-21-16 33z m-38 128 36-14-43-14-46 49 8 40 15 28 23 4 28-7 12-11 1-21-12 1-1 3 2-1z m-51 118-36 15 16 67-32 51-14-5 1 21-12 11-28 7-23-4-15-28 11-3-1 3-2-1 2-21z m16 105-1-21 12-11 28-7 23 4 15 28 11 3 1-3 2 1 2 21-11 3z m23 23-11-3-1 3 2 1 2 21-11 3 9 22-23 23-15 48-31 16 48-26z m55 83-48 26-31-16-15-48 23-23-9-22-11 3 1-3 2 1 2 21-11 3 1-3 2 2 11 1 7-5 13 1 12 10 32 16 3-12 21-16 4 1-1-1 1-2 13 10 10 16 18-5 14-8 14-25 10-10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18 10 19z m-16 83 12 19 43-41-2 21-11-3 1 3-2 2-11 1-7 5-13 1-12-10-32-16-3 12-21 16-4-1-1 1-1 2-13-10-10-16-18 5-14 8-14 25-10-10-5-11-10 20-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18 10 19z m25-86-10 19 24-18 11 13-25-1z m-41 120-14 8-18 5-10-16-13-10 1 1 1-1-4-1 1-16 21 16-3-12-32-16-12-10-13-1-7 5-11 1 2-2-1-3 11-3-2-21 43-41-12-19-36-24-16-22 25 15 13 22 28 9z m-75 125-28-9-13-22-25-15 16-22-36-24-12 19 33 28 41 21 21 47 3-11z m21 68-3-11-21-47-41-21 33-28 12-19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25-13 25-1 11 13 24-18 10 19z m25-86-7-14-12 19 36 24-16 22-7-14z m63-22-36-29-7-14 16-22-28-9-13-22-25-15 14-8 18-5-10-16-13-10 10-20-5 11-10 10-14 25-10 10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20 21z m-41 120-1-18-36-29 7-14 16 22-25 15-13 22 28 9 14 8z m-28-76 12 5-7-12-1-18z m-12-68-31 31-15 23-25 13-25 1-11 13-24-18-10-19-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21-27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28z m1 129-33-28-4-19-25-13-27-21-10-10-35 1-16 22-11 11 19 23 27 28 20 23 37 13 41 11 31-11z m-59 86-31 11-41-11-37-13-20-23-27-28-19-23 26-28 32-15 29 16 35 21 17 26 18 13z m-53-48-29-16-32 15-26 28 19 23-11-11-16-22-35-1 10-10 16-27 21-25 13-4-19 33-28 12-19 7 14z m10-191 10 10-16 27-21 25-13-4-19 33-28 12-19-7-14 36-29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1z m-55 125 11-11-19-23-27-28-20-23-37-13-41-11-31 11 6 9 37 8 23 15 28 32 35 31z m-45 15-35-31-28-32-23-15-37-8-6-9-27 5-29 16 11 12 19 8 16 25 21 16 34 39 31 11z m-35 48-31-11-34-39-21-16-16-25-19-8-11-12 29-16 27-5 29 14 36 21 27 16z m-35 52-27-16-36-21-29-14 27-5-10-16-36 10-25 22-14 26 5 19 33 22 36 12 40 4z m-41 40-40-4-36-12-33-22-5-19 14-26 25-22 36-10 10 16 27 5 10 14 31 12 26-10z m-16 31-26 10-31-12-10-14-27-5 21-17 19-30 14-25 26-5 31 17 23 30z m-43-15-23-30-31-17-26 5-14 25-19 30-21 17 36-10 25-22 14-26 16-5 30 18 20 28z m1-48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36 10-25 22-14 26 16-5 30 18 20 28z m-269-633 42 1 2-30-22 5-27-21 16-33 24 34 34-31z m-47 119-40 10 14-36-12 1-1 3-2-1z m93 108 12 1-14-36 27-21-16 33z m-38 128 36-14-43-14-46 49 8 40 15 28 23 4 28-7 12-11 1-21-12 1-1 3 2-1z m-51 118-36 15 16 67-32 51-14-5 1 21-12 11-28 7-23-4-15-28 11-3-1 3-2-1 2-21z m16 105-1-21 12-11 28-7 23 4 15 28 11 3 1-3 2 1 2 21-11 3z m23 23-11-3-1 3 2 1 2 21-11 3 9 22-23 23-15 48-31 16 48-26z m55 83-48 26-31-16-15-48 23-23-9-22-11 3 1-3 2 1 2 21-11 3 1-3 2 2 11 1 7-5 13 1 12 10 32 16 3-12 21-16 4 1-1-1 1-2 13 10 10 16 18-5 14-8 14-25 10-10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18 10 19z m-16 83 12 19 43-41-2 21-11-3 1 3-2 2-11 1-7 5-13 1-12-10-32-16-3 12-21 16-4-1-1 1-1 2-13-10-10-16-18 5-14 8-14 25-10-10-5-11-10 20-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28 41 21 21 47 3-11-21-47-41-21-33 28-12 19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25 13 25 1 11 13 24-18 10 19z m25-86-10 19 24-18 11 13-25-1z m-41 120-14 8-18 5-10-16-13-10 1 1 1-1-4-1 1-16 21 16-3-12-32-16-12-10-13-1-7 5-11 1 2-2-1-3 11-3-2-21 43-41-12-19-36-24-16-22 25 15 13 22 28 9z m-75 125-28-9-13-22-25-15 16-22-36-24-12 19 33 28 41 21 21 47 3-11z m21 68-3-11-21-47-41-21 33-28 12-19 7 14 36 29 1 18 7 12 12-5 31-31 15-23 25-13 25-1 11 13 24-18 10 19z m25-86-7-14-12 19 36 24-16 22-7-14z m63-22-36-29-7-14 16-22-28-9-13-22-25-15 14-8 18-5-10-16-13-10 10-20-5 11-10 10-14 25-10 10 5-11 10-20 20-1 18 10 15 28 34 22 36-21 10-25 16-9 20 21z m-41 120-1-18-36-29 7-14 16 22-25 15-13 22 28 9 14 8z m-28-76 12 5-7-12-1-18z m-12-68-31 31-15 23-25 13-25 1-11 13-24-18-10-19-20 1-18-10-15-28-34-22-36 21-10 25-16 9-20-21-27-10-41 13-11-11 16-22 35 1 10 10 16 27 21 25 13 4 19 33 28z m1 129-33-28-4-19-25-13-27-21-10-10-35 1-16 22-11 11 19 23 27 28 20 23 37 13 41 11 31-11z m-59 86-31 11-41-11-37-13-20-23-27-28-19-23 26-28 32-15 29 16 35 21 17 26 18 13z m-53-48-29-16-32 15-26 28 19 23-11-11-16-22-35-1 10-10 16-27 21-25 13-4-19 33-28 12-19 7 14z m10-191 10 10-16 27-21 25-13-4-19 33-28 12-19-7-14 36-29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1z m-55 125 11-11-19-23-27-28-20-23-37-13-41-11-31 11 6 9 37 8 23 15 28 32 35 31z m-45 15-35-31-28-32-23-15-37-8-6-9-27 5-29 16 11 12 19 8 16 25 21 16 34 39 31 11z m-35 48-31-11-34-39-21-16-16-25-19-8-11-12 29-16 27-5 29 14 36 21 27 16z m-35 52-27-16-36-21-29-14 27-5-10-16-36 10-25 22-14 26 5 19 33 22 36 12 40 4z m-41 40-40-4-36-12-33-22-5-19 14-26 25-22 36-10 10 16 27 5 10 14 31 12 26-10z m-16 31-26 10-31-12-10-14-27-5 21-17 19-30 14-25 26-5 31 17 23 30z m-43-15-23-30-31-17-26 5-14 25-19 30-21 17 36-10 25-22 14-26 16-5 30 18 20 28z m1-48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36 10-25 22-14 26 16-5 30 18 20 28z"/>
+                              <path class="region-path" data-name="Tumbes" d="m191 18-9 22-26 13-20-15-11-14 33-14 33-8z"/>
+                              <path class="region-path" data-name="Piura" d="m182 40-33 8 14 35 15 21 44-11 20-28-18-20-38 11-4-15z m-49 19-33-14 11 14 20 15 26-13 9-22-33-8z m33-8-14-35 23-10 24 10 9 20-4-15z"/>
+                              <path class="region-path" data-name="Lambayeque" d="m210 102-44 11-15-21-14-35 23-10 24 10 9 20 17 25z"/>
+                              <path class="region-path" data-name="Cajamarca" d="m267 215-27-18-42-1 5-30 22-5 27-21-16 33-24 34-34-31-5 46-42 14 1 3-2 1-12-1 14-36-27 21 16-33 24 34 34-31-5 46 42 14 12 1 1-3 2 1-14 36 27-21-16 33 24 34 34-31 5-46 42 14-12-1-1 3-2-1 14-36 27-21-16 33-24 34-34-31 5-46 42 14 12 1 1-3 2 1 14 36-27 21 16-33 24 34 34-31 5-46 42 14z m-57-113 17-25-9-20-24-10-23 10-14 35-15 21 44-11 20 28 18-20 38-11-20-28 1-3 2 1 12 1z m1 3-1-3 2 1 12 1-14 36-27 21 16-33 24 34 34-31 5-46 42 14z"/>
+                              <path class="region-path" data-name="Amazonas" d="m289 185-17 25 27 18 42 1-2-30 22-5 27-21 40-10-14 36-12 1 1-3 2 1-12-1 14-36 27 21 40 10z m22-83 20-28 49 37 13-18 38-11 18 20 42-14-1-3 2 1-12-1 14-36-40 10-27-21-22 5-2 30-42-1-27 18z"/>
+                              <path class="region-path" data-name="San Martín" d="m303 368-25-15-22-25-16-33 27-21 40 10-14 36 12 1-1-3 2 1 12-1-14 36-27 21 16-33 24 34 34-31-5 46-42-14 12 1 1-3 2 1-12-1 14-36 27 21 40 10z m-14-153-27-18 42-1 5-30 22-5 27-21 40-10 14-36 12 1-1-3 2 1 12-1-14-36 27 21 40 10z m14 153-27-21 40 10-14 36 12 1-1-3 2 1 12-1-14 36 27-21-16 33 24 34 34-31-5 46 42 14 12 1 1-3 2 1z"/>
+                              <path class="region-path" data-name="La Libertad" d="m253 357 14 69-32 51 25-15 22-25 16-33-27-21-40 10-14 36-12-1 1-3 2 1z"/>
+                             <path class="region-path" data-name="Áncash" d="m290 479-8 40 15 28 23 4 28-7 12-11 1-21-14 5-32-51 16-67-36 15-1 21 12 11 28 7 23 4 15 28-8-40-46-49-44-53-42 26 11 18 29 13 20-36 4 23 10 31 25-3 32-15 14-5 1 21 12 11 28 7 23 4 15 28z m-46-21 46-49 8 40-15-28-23-4-28 7-12 11-1 21 12-1 1-3 2 1z"/>
+                              <path class="region-path" data-name="Huánuco" d="m315 528 10 32-28 17 8 71 52 35-34 22 9-54 32-26 43-21 28-17-10-32 16-67-36 15 48-26-31 16-15-48-23-23 9-22 11-3 15 28 4-8 10 7 23 5 43-41-12-19 36 24 16 22 7-14 12-19-43 41 2 21-11-3 1 3-2 2-11 1-7 5-13 1-12-10-32-16-3 12-21 16z m-16-89 36-15 1-21-12-11-28-7-23-4-15-28 8 40 46 49 44 53 42-26-11-18-29-13-20 36-4-23-10-31z"/>
+                              <path class="region-path" data-name="Ucayali" d="m415 572-43-21-32 26 9 54-34 22 52-35-8-71 28-17 10 32-16 67 36-15-48 26-31 16-15-48-23-23 9-22 11-3 15 28 4-8 10 7 23 5 43-41-12-19 36 24 16 22 7-14-36-29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21z m-43 21-28 17-10 32z m43-21 28-17 10 32-16 67-36-15 48-26z m0 0-16 67-36-15 48-26z m0 0 28-17 10 32z m0 0-43-21-32 26 9 54-34 22 52-35-8-71z m0 0 28-17 10 32-16 67-36-15 48-26z m0 0-43-21-32 26 9 54-34 22 52-35-8-71z"/>
+                              <path class="region-path" data-name="Pasco" d="m309 646-44-53-42 26-11 18-29 13-20 36 4 23 10 31 25-3 32-15 10-19 20-7 46-49 36-14-43-14-46 49-8-40-15-28-23-4-28-7-12-11-1-21 12-1 1-3 2 1z"/>
+                              <path class="region-path" data-name="Lima" d="m302 764-46 49-20 7-10 19-32 15-25 3-10-31-4-23 20-36 29-13 11-18 42-26-44 53-36 14z m95 72-36 15 1 21-12 11-28 7-23-4-15-28-11 3-9 22 23 23 15 48 31 16 48-26z m-16-105-10-7-4 8-15-28-4-8-2 6 2 21-1-21 14 5 32-51 16-67 36 15-48 26z m8 160-43 41-23-5-10-7-2-21-2-6 11 3-1-3 2-2 11-1 7-5 13 1 12 10 32 16 3-12 21-16z m-16-105-10-7-4 8-15-28-4-8-2 6 2 21-1-21 14 5 32-51 16-67 36 15-48 26z m95 72-36 15 1 21-12 11-28 7-23-4-15-28-11 3-9 22 23 23 15 48 31 16 48-26z m-113-177 16-67 36 15-48 26z m95 72-36 15 1 21-12 11-28 7-23-4-15-28-11 3-9 22 23 23 15 48 31 16 48-26z m-16-105-10-7-4 8-15-28-4-8-2 6 2 21-1-21 14 5 32-51 16-67 36 15-48 26z m-22 165-43-14-46 49 8 40 15 28 23 4 28-7 12-11 1-21-12 1-1 3 2 1z m16-105-1-21 12-11 28-7 23 4 15 28 11 3 1-3 2 1 2 21-11 3z m-18 19-12-19-43 41 2 21-11-3 1 3-2 2-11 1-7 5-13 1-12-10-32-16-3 12-21 16 4 1-1-1 1-2 13 10 10 16 18-5 14-8 14-25 10-10 5-11 10-20z"/>
+                              <path class="region-path" data-name="Junín" d="m377 805-48 26-31-16-15-48-23-23 9-22 11-3 15 28 4-8 10 7 23 5 43-41-12-19 36 24 16 22 7-14 12-19-43 41 2 21-11-3 1 3-2 2-11 1-7 5-13 1-12-10-32-16-3 12-21 16z m-16-105-10-7-4 8-15-28-4-8-2 6 2 21-1-21 14 5 32-51 16-67 36 15-48 26z m16 105 16-67 36-15-48 26z"/>
+                              <path class="region-path" data-name="Huancavelica" d="m330 923-33 28-4 19 25 13 27 21 10 10 35 1-16 22-11 11 19 23 27 28 20 23-37-13-41-11-31 11-6-9-37-8-23-15-28-32-35-31 29-16 11 12 19 8 16 25 21 16 34 39 31 11-27-5-29-16-35-21-17-26-18-13z"/>
+                              <path class="region-path" data-name="Ayacucho" d="m368 939-29-16-32 15-26 28 19 23-11-11-16-22-35-1 10-10 16-27 21-25 13-4-19 33-28-12-19 36 24-16 22 7-14 36 29 1 18 7 12 12-5 31-31 15-23-25 13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21z"/>
+                              <path class="region-path" data-name="Ica" d="m274 972-26-28-32-15-29-16-11-12-19-8-16-25-21-16-34-39-31-11 27-5 29 16 35 21 17 26 18 13z m-20 46-35-21-17-26-18-13-29 16-11 12-19 8-16-25-21-16-34-39-31-11 27-5z"/>
+                              <path class="region-path" data-name="Apurímac" d="m416 1025-27-21-10-10-35-1-16 22-11 11 19 23 27 28 20 23 37 13 41 11 31-11-6-9-37-8-23-15-28-32-35-31 29-16-11-12-19-8-16-25-21-16-34-39-31-11 27-5-29-16-35-21-17-26-18-13z m-38-36-33 28 12-19 36 24-16 22-7-14-36-29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21z"/>
+                              <path class="region-path" data-name="Cusco" d="m465 997 10 10-16 27-21 25-13-4-19 33-28 12-19-7-14 36-29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1z m59 86-31 11-41-11-37-13-20-23-27-28-19-23 26-28 32-15 29 16 35 21 17 26 18 13z m-53-48-29-16-32 15-26 28 19 23-11-11-16-22-35-1 10-10 16-27 21-25 13-4-19 33-28 12-19 7 14z m-16-105-10-7-4 8-15-28-4-8-2 6 2 21-1-21 14 5 32-51 16-67-36 15 48-26z"/>
+                              <path class="region-path" data-name="Madre de Dios" d="m540 869 10 10 16 27 21 25 13 4 19-33 28-12 19-7 14-36 29-1-18-7-12-12 5-31-31-15-23-25-13-25-1-11 13-24-18-10-19 20-1 18-10 15-28 34-22-36 21-10 25-16 9-20-21 27-10-41 13-11-11 16-22 35 1z"/>
+                              <path class="region-path" data-name="Puno" d="m507 1092-31-11-34-39-21-16-16-25-19-8-11-12 29-16 27-5 29 14 36 21 27 16z m-35 52-27-16-36-21-29-14 27-5-10-16-36 10-25 22-14 26 5 19 33 22 36 12 40 4z m-41 40-40-4-36-12-33-22-5-19 14-26 25-22 36-10 10 16 27 5 10 14 31 12 26-10z m-16 31-26 10-31-12-10-14-27-5 21-17 19-30 14-25 26-5 31 17 23 30z m-43-15-23-30-31-17-26 5-14 25-19 30-21 17 36-10 25-22 14-26 16-5 30 18 20 28z m1-48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36 10-25 22-14 26 16-5 30 18 20 28z"/>
+                              <path class="region-path" data-name="Arequipa" d="m424 1133-29-14-36-21-27-16-10 14-31-12-26 10 16-5-30-18-20-28 14-26-25-22-36-10 21 17 19 30 14 25 26 5 31 17 23 30z m-43-15-23-30-31-17-26 5-14 25-19 30-21 17 36-10 25-22 14-26 16-5 30 18 20 28z m1-48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36 10-25 22-14-26 16-5 30 18 20 28z m-27-16 27 16-10-14-31-12-26 10 16-5-30-18-20-28 14-26-25-22-36-10 21 17 19 30 14 25 26 5 31 17 23 30z"/>
+                              <path class="region-path" data-name="Moquegua" d="m423 1211-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36-10-25-22-14-26 16-5 30 18 20 28z m1-48-20-28-30-18-16 5 14 26-25 22-36 10-21 17 27 5-10 16-36-10-25-22-14-26 16-5 30 18 20 28z m-27-16 27 16-10-14-31-12-26 10 16-5-30-18-20-28 14-26-25-22-36-10 21 17 19 30 14 25 26 5 31 17 23 30z"/>
+                              <path class="region-path" data-name="Tacna" d="m424 1259-27-16-36-21-29-14 27-5-10-16-36 10-25 22-14 26 5 19 33 22 36 12 40 4z m-41 40-40-4-36-12-33-22-5-19 14-26 25-22 36-10 10 16 27 5 10 14 31 12 26-10z m-16 31-26 10-31-12-10-14-27-5 21-17 19-30 14-25 26-5 31 17 23 30z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para Estructura Regional -->
+        <div id="map-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden transition-all duration-300 backdrop-blur-sm">
+            <div class="bg-white p-8 rounded-2xl max-w-2xl w-full relative scroll-animate shadow-2xl border border-gray-200" id="modal-content">
+                <button id="close-map-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-3xl font-light transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-an-red rounded-full w-10 h-10 flex items-center justify-center" aria-label="Cerrar modal">&times;</button>
+                
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-an-red rounded-full flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-an-red">Comité Regional de <span id="modal-region-name" class="text-an-text">Región</span></h3>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-an-red" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Estructura Organizativa
+                        </h4>
+                        <ul class="space-y-3 text-gray-700" id="regional-structure">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-an-red rounded-full mr-3"></span>
+                                Secretaría General Regional
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-an-red rounded-full mr-3"></span>
+                                Subsecretaría General Regional
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-an-red rounded-full mr-3"></span>
+                                S. Regional de Organización
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-an-red rounded-full mr-3"></span>
+                                S. Regional de la Mujer
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-an-red rounded-full mr-3"></span>
+                                S. Regional de Formación
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-an-red rounded-full mr-3"></span>
+                                S. Regional de Juventudes
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-an-red rounded-full mr-3"></span>
+                                S. de Asuntos Jurídicos
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-an-red rounded-full mr-3"></span>
+                                S. de Movilizaciones
+                            </li>
                         </ul>
-                    </article>
-
-                    <article>
-                        <h3>Tribunal Nacional de Ética y Disciplina (TNDE)</h3>
-                        <p>Función: investigar y sancionar infracciones a la disciplina y ética. Conformación inicial (titulares):</p>
-                        <ul>
-                            <li>Presidente: IVET ZABRINA BARROS PERALES</li>
-                            <li>Secretario: RUBÉN RENATO HUAMANI HUARCAYA</li>
-                            <li>Vocal: EVA LORENZA BONIFACIO PORRAS</li>
-                        </ul>
-                    </article>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-an-red" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Información Regional
+                        </h4>
+                        <div id="regional-info" class="space-y-3">
+                            <p class="text-gray-600">Información específica de la región próximamente disponible.</p>
+                        </div>
+                    </div>
                 </div>
-                <p>Se incluyen enlaces a la sección de Disciplina y procedimientos en la página de Transparencia y Reglamentos.</p>
+                
+                <div class="mt-8 bg-gradient-to-r from-an-gray to-gray-100 p-6 rounded-xl border-l-4 border-an-red">
+                    <h4 class="font-bold text-an-text mb-2 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-an-red" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                        </svg>
+                        Principio de Paridad y Participación
+                    </h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Los cargos de <span class="font-semibold text-an-red">Secretario General y Subsecretario General</span> deben ser de 
+                        <span class="font-semibold">distinto sexo</span>, garantizando la equidad de género. La lista completa debe estar 
+                        compuesta por <span class="font-semibold">mitad hombres y mitad mujeres</span>, asegurando la participación plena 
+                        y diversa de todos los ciudadanos en la construcción de la nación peruana.
+                    </p>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <button id="close-modal-btn" class="bg-an-red hover:bg-an-red-dark text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-an-red focus:ring-offset-2">
+                        Entendido
+                    </button>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <!-- V. Órganos Especializados -->
-        <section class="org-section" id="organos-especializados">
-            <div class="container">
-                <h2>V. Órganos Especializados — Gestión Legal y Financiera</h2>
-                <dl>
-                    <dt>Personero Legal Titular</dt>
-                    <dd>ÁNGEL RENATO MENESES CRISPÍN</dd>
 
-                    <dt>Personero Técnico Titular</dt>
-                    <dd>CESAR ABELARDO ROJAS AHUMADA</dd>
+        <!-- SECCIÓN 5: Ética y Valores -->
+        <section id="etica" class="py-24 px-8 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 scroll-animate">Compromiso con la Ética y los Valores</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Valor 1: Honestidad -->
+                    <div class="text-center p-8 bg-white rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 scroll-animate">
+                        <div class="mb-4">
+                            <svg class="w-16 h-16 mx-auto text-an-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Honestidad</h3>
+                        <p class="text-gray-600">Respeto a la verdad en la correspondencia de lo que se piensa, se dice y se hace.</p>
+                    </div>
 
-                    <dt>Tesorero Titular</dt>
-                    <dd>JACQUELINE DUEÑAS QUISPE</dd>
+                    <!-- Valor 2: Transparencia -->
+                    <div class="text-center p-8 bg-white rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 scroll-animate" style="transition-delay: 150ms;">
+                        <div class="mb-4">
+                            <svg class="w-16 h-16 mx-auto text-an-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Transparencia</h3>
+                        <p class="text-gray-600">Las decisiones partidarias deben ser verificables y sujetas al escrutinio de la militancia y la ciudadanía.</p>
+                    </div>
 
-                    <dt>Representante Legal</dt>
-                    <dd>GROVER JUAN CORNEJO YANCCE</dd>
+                    <!-- Valor 3: Integridad -->
+                    <div class="text-center p-8 bg-white rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 scroll-animate" style="transition-delay: 300ms;">
+                        <div class="mb-4">
+                            <svg class="w-16 h-16 mx-auto text-an-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Integridad</h3>
+                        <p class="text-gray-600">Absoluto rechazo a la corrupción y respeto pleno a los derechos humanos.</p>
+                    </div>
+                </div>
 
-                    <dt>Apoderado</dt>
-                    <dd>NÉSTOR DIOSDADO VILLEGAS ALARCÓN</dd>
-                </dl>
-                <p class="org-contact-note">Contacto y trámites: utilice la tabla de contactos en la sección de Transparencia para consultas formales y peticiones de información.</p>
-            </div>
-        </section>
-
-        <!-- VI. Órganos Descentralizados y Estrategia Territorial -->
-        <section class="org-section" id="descentralizacion">
-            <div class="container">
-                <h2>VI. Órganos Descentralizados y Estrategia Territorial</h2>
-                <p>Comités Ejecutivos Descentralizados: regionales, provinciales, distritales y en el exterior. Los miembros son elegidos por períodos de 2 años. Se promueve "Todo el poder a las regiones" como lema de descentralización productiva.</p>
-
-                <div class="org-map-regional">
-                    <p>Mapa interactivo (implementación futura): al hacer clic en una región se desplegarán los comités y contactos regionales.</p>
+                <!-- Enlace al Tribunal -->
+                <div class="mt-20 text-center scroll-animate" style="transition-delay: 450ms;">
+                    <a href="#" class="inline-block bg-an-red text-an-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300 hover:bg-an-red-dark">
+                        Conocer el Tribunal Nacional de Ética y Disciplina
+                    </a>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                        Toda decisión disciplinaria se sigue respetando el debido proceso, el derecho a la defensa y la doble instancia.
+                    </p>
                 </div>
             </div>
         </section>
 
     </main>
-
-    <!-- Footer include -->
+    
+    <!-- FOOTER (included) -->
     <div data-include="includes/footer.html"></div>
 
     <script src="js/includes.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/scroll-animate.js" defer></script>
     <script src="js/organizacion.js" defer></script>
 </body>
+</html>

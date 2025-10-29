@@ -1,218 +1,278 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ideario y Principios — AHORA NACIÓN</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/ideario.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideario y Principios - AHORA NACIÓN</title>
+    
+    <!-- Hoja de Estilos CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ideario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
       body {
         padding-top: 40px; /* Ajuste para la barra superior fija */
       }
-  </style>
+    </style>
 </head>
 <body>
-  <div data-include="includes/header.html"></div>
+    <!-- 
+      AQUÍ COMIENZA EL CONTENIDO DE LA SUBPÁGINA
+      (Tu HEADER iría antes de esto)
+    -->
+    
+    <!-- NAVBAR (included) -->
+    <header data-include="includes/header.html"></header>
 
-  <!-- I. Mensaje Central y Convocatoria -->
-  <header class="ideario-hero">
-    <div class="container">
-      <img src="https://i.imgur.com/tLg1l0c.png" alt="Logo AHORA NACIÓN" style="width: 100px; margin-bottom: 1rem; border-radius: 10px;">
-      <h1>Porque el momento es AHORA; ¡AHORA NACIÓN!</h1>
-      <p class="subtitle">Convocamos a la mujer peruana, a los jóvenes, a los intelectuales, a quienes buscan empleo, a los maestros, a los trabajadores del campo y la ciudad, a los empresarios y a los miembros de las Fuerzas Armadas a ser parte del noble oficio de hacer verdadera política.</p>
-      <a href="participa.html" class="cta-button">Únete a la Convocatoria</a>
-    </div>
-  </header>
+    <main>
+        
+        <!-- ============================================== -->
+        <!-- I. Mensaje Central y Convocatoria -->
+        <!-- ============================================== -->
+        <section id="convocatoria" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-logo">AN</div>
+                <h1 class="hero-title">Porque el momento es AHORA;<br>¡AHORA NACIÓN!</h1>
+                <p class="hero-subtitle">AHORA NACIÓN convoca a la mujer peruana, a los jóvenes, intelectuales, maestros, trabajadores y empresarios a ser parte del noble oficio de hacer verdadera política.</p>
+                <a href="#afiliacion" class="cta-button">Únete a la Convocatoria</a>
+            </div>
+        </section>
 
-  <main>
-    <!-- II. Principios Fundamentales -->
-    <section class="ideario-section container">
-      <h2>Nuestros 5 Pilares Fundamentales</h2>
-      <div class="principles-grid">
-        <div class="principle-card">
-          <div class="icon"><i class="fas fa-flag"></i></div>
-          <h3>Construcción de la Nación</h3>
-          <p>Sostenemos la tesis de que el Perú es una nación en formación y nuestra causa es culminar esta gran tarea histórica.</p>
-        </div>
-        <div class="principle-card">
-          <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
-          <h3>Todo el Poder a las Regiones</h3>
-          <p>Apostamos por el desarrollo local y regional como forma auténtica de descentralización y competitividad.</p>
-        </div>
-        <div class="principle-card">
-          <div class="icon"><i class="fas fa-vote-yea"></i></div>
-          <h3>Un Militante, Un Voto</h3>
-          <p>Promovemos un sistema de partidos por razón de Estado, fomentando el disenso y la oposición constructiva.</p>
-        </div>
-        <div class="principle-card">
-          <div class="icon"><i class="fas fa-users"></i></div>
-          <h3>Unidad, Justicia y Libertad</h3>
-          <p>Buscamos alentar el surgimiento de una coalición nacional de centro izquierda bajo el principio de "un militante un voto".</p>
-        </div>
-        <div class="principle-card">
-          <div class="icon"><i class="fas fa-equals"></i></div>
-          <h3>Igualdad de Derechos</h3>
-          <p>Reconocemos la igualdad ante la ley sin distinción de raza, género, nacionalidad o condición social.</p>
-        </div>
-      </div>
-    </section>
+        <!-- ============================================== -->
+        <!-- II. Principios Fundamentales -->
+        <!-- ============================================== -->
+        <section id="principios" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Nuestros 5 Pilares Fundamentales</h2>
+                <div class="principios-grid">
+                    
+                    <article class="principio-card">
+                        <div class="card-icon">🏛️</div>
+                        <h3>1. Construcción de la Nación Peruana</h3>
+                        <p class="card-summary">Sostenemos la tesis de que el Perú es una nación en formación.</p>
+                        <p class="card-full-text">Sostenemos la tesis de que el Perú es una nación en formación y nuestra causa noble es culminar esta gran tarea histórica.</p>
+                    </article>
 
-    <!-- III. Cuerpo Doctrinal -->
-    <section class="ideario-section container">
-      <h2>Cuerpo Doctrinal (Ideario)</h2>
-      <div class="accordion">
-        <div class="accordion-item">
-          <div class="accordion-header">1. Un Nuevo Mundo Ahora</div>
-          <div class="accordion-content">
-            <p>El mundo vive tiempos de cambio. La transformación global exige reconsiderar la configuración política, militar y económica. Buscamos una economía moderna y competitiva que respete nuestra cultura, asimilando lo mejor del mundo sin asimilarnos, ampliando el mercado interno para negociar desde una posición de fortaleza.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">2. Ideal de la Nación Peruana</div>
-          <div class="accordion-content">
-            <p>Buscamos construir una base de pensamiento que privilegie lo que nos une. Remitiéndonos a los clásicos peruanos, entendemos que el Perú es más Estado y menos Nación. La nación es alma, espíritu, una meta común y un acuerdo en lo fundamental.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">3. Identidad Nacional</div>
-          <div class="accordion-content">
-            <p>Nuestra heterogeneidad cultural es la fuente de nuestro carácter único. Asumimos la energía positiva de esta diversidad, combinando valores de nuestra tradición (disciplina, laboriosidad) con los de la modernidad (eficiencia, competitividad) para lograr una modernización con identidad.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">4. Estado, Economía y Sociedad</div>
-          <div class="accordion-content">
-            <p>La crisis del Perú demanda un diseño global de Estado, economía y sociedad. Aspiramos a conducir el cambio, buscando "todo el poder a las regiones para conquistar los mercados del mundo" y responder a los grandes dilemas de nuestro tiempo.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">5. Estado Social</div>
-          <div class="accordion-content">
-            <p>El Estado es la casa, pero la Nación es el hogar. El Estado ha sido solo fuerza, negando el "acuerdo en lo fundamental". Rescatar la nación es un imperativo moral, económico y de proyecto nacional para construir un verdadero Estado-Nación.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">6. Unidad, Justicia y Libertad</div>
-          <div class="accordion-content">
-            <p>Buscamos una sociedad de hombres libres e iguales. La unidad nacional no es unanimidad, sino que radica en la diversidad. Una política de ideas fortalece la nación, una nación fuerte conduce a una economía fuerte, y esta, a un Estado fuerte.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <article class="principio-card">
+                        <div class="card-icon">🗺️</div>
+                        <h3>2. Todo el poder a las regiones</h3>
+                        <p class="card-summary">Apostamos por el desarrollo local y regional.</p>
+                        <p class="card-full-text">Apostamos por el desarrollo local y regional como una forma auténtica de descentralización productiva y de industrialización nacional. Es un acto de justicia y la manera más eficiente para lograr la competitividad.</p>
+                    </article>
 
-    <!-- IV. Visión de País y Objetivos Estratégicos -->
-    <section class="ideario-section container">
-      <h2>Visión y Objetivos Estratégicos</h2>
-      <div class="vision-box">
-        <h3>Nuestra Visión</h3>
-        <p>Contribuir con la tarea histórica de culminar el proceso de construcción de la nación peruana, alentando un empresariado innovador, defendiendo a los trabajadores y construyendo una nación de ciudadanos con desarrollo sostenible.</p>
-      </div>
-      <h3>Objetivos Estratégicos</h3>
-      <ul class="objectives-list">
-        <li class="objective-item"><div class="icon"><i class="fas fa-landmark"></i></div><div><strong>Consolidar la democratización:</strong> Lograr un Estado democrático, descentralizado, soberano y libre de corrupción.</div></li>
-        <li class="objective-item"><div class="icon"><i class="fas fa-cogs"></i></div><div><strong>Servicios Públicos de Calidad:</strong> Gestionar los servicios de manera eficaz, eficiente y transparente con participación ciudadana.</div></li>
-        <li class="objective-item"><div class="icon"><i class="fas fa-balance-scale"></i></div><div><strong>Estado de Derecho:</strong> Garantizar que todos somos iguales ante la Ley, prevaleciendo la justicia social.</div></li>
-        <li class="objective-item"><div class="icon"><i class="fas fa-globe-americas"></i></div><div><strong>República Descentralizada:</strong> Fortalecer una república que celebra la convivencia armoniosa de todas las culturas.</div></li>
-        <li class="objective-item"><div class="icon"><i class="fas fa-university"></i></div><div><strong>Instituciones Fuertes:</strong> Estructurar el Estado con instituciones democráticas sólidas y separación de poderes.</div></li>
-        <li class="objective-item"><div class="icon"><i class="fas fa-gavel"></i></div><div><strong>Justicia sin Privilegios:</strong> Asegurar un sistema de justicia unitario, descentralizado y sin privilegios.</div></li>
-        <li class="objective-item"><div class="icon"><i class="fas fa-heartbeat"></i></div><div><strong>Acceso a Derechos:</strong> Proveer servicios públicos de calidad, garantizando el derecho a la salud y la educación.</div></li>
-      </ul>
-    </section>
+                    <article class="principio-card">
+                        <div class="card-icon">🗳️</div>
+                        <h3>3. Un militante un voto</h3>
+                        <p class="card-summary">Promovemos un sistema de partidos por razón de Estado.</p>
+                        <p class="card-full-text">Promovemos el surgimiento de un sistema de partidos por razón de Estado, fomentando el disenso y la oposición para discutir la naturaleza del cambio propio.</p>
+                    </article>
 
-    <!-- V. Valores Éticos -->
-    <section class="ideario-section container">
-      <h2>Nuestros Valores Éticos</h2>
-      <div class="values-grid">
-        <div class="value-card" data-title="Respeto" data-text="Reconocer en uno y en los demás sus derechos, obligaciones, virtudes y defectos con dignidad.">
-          <div class="icon"><i class="fas fa-hands-helping"></i></div>
-          <h3>Respeto</h3>
-        </div>
-        <div class="value-card" data-title="Lealtad" data-text="Ser fieles a las convicciones y al bien común, incluso en las circunstancias más difíciles.">
-          <div class="icon"><i class="fas fa-handshake"></i></div>
-          <h3>Lealtad</h3>
-        </div>
-        <div class="value-card" data-title="Solidaridad" data-text="Ayuda, apoyo, fraternidad y empatía hacia el individuo y poblaciones vulnerables.">
-          <div class="icon"><i class="fas fa-users-cog"></i></div>
-          <h3>Solidaridad</h3>
-        </div>
-        <div class="value-card" data-title="Tolerancia" data-text="Aceptación de personas, situaciones o cosas con las que no se comparten opiniones, ideas o actitudes, pero que se respetan.">
-          <div class="icon"><i class="fas fa-comments"></i></div>
-          <h3>Tolerancia</h3>
-        </div>
-        <div class="value-card" data-title="Honestidad" data-text="Respeto a la verdad de lo que se piensa, dice y hace, con relación a la realidad concreta, la objetividad y las evidencias de los hechos.">
-          <div class="icon"><i class="fas fa-check-circle"></i></div>
-          <h3>Honestidad</h3>
-        </div>
-        <div class="value-card" data-title="Transparencia" data-text="Las decisiones partidarias deben basarse en fundamentos verificables, sujetas al escrutinio de la militancia y de la ciudadanía, de forma libre, gratuita e inmediata.">
-          <div class="icon"><i class="fas fa-eye"></i></div>
-          <h3>Transparencia</h3>
-        </div>
-        <div class="value-card" data-title="Integridad" data-text="Práctica de la honradez, honestidad, respeto pleno a los derechos humanos, así como absoluto rechazo a la corrupción.">
-          <div class="icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>Integridad</h3>
-        </div>
-      </div>
-    </section>
-  </main>
+                    <article class="principio-card">
+                        <div class="card-icon">🤝</div>
+                        <h3>4. Unidad, Justicia y Libertad</h3>
+                        <p class="card-summary">Buscamos alentar una coalición nacional de centro izquierda.</p>
+                        <p class="card-full-text">Buscamos alentar el surgimiento de una coalición nacional de centro izquierda bajo el principio de "un militante un voto".</p>
+                    </article>
 
-  <!-- Modal for Values -->
-  <div id="valueModal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <p id="modalText"></p>
-    </div>
-  </div>
+                    <article class="principio-card">
+                        <div class="card-icon">⚖️</div>
+                        <h3>5. Igualdad y No Discriminación</h3>
+                        <p class="card-summary">Reconocemos la igualdad ante la ley de todos los peruanos.</p>
+                        <p class="card-full-text">Reconocemos la igualdad ante la ley de todos los hombres y mujeres del Perú, sin distinción de raza, género, nacionalidad, o condición social o económica, tal como lo reconoce la Constitución.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-  <div data-include="includes/footer.html"></div>
+        <!-- ============================================== -->
+        <!-- III. Cuerpo Doctrinal (Ideario) -->
+        <!-- ============================================== -->
+        <section id="ideario" class="section-padding section-dark">
+            <div class="container">
+                <h2 class="section-title">Nuestro Cuerpo Doctrinal</h2>
+                <div class="accordion-container">
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>1. Un Nuevo Mundo Ahora</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>El mundo actual vive tiempos de cambio y competencia aguda. La vertiginosa transformación mundial traspasa fronteras. El escenario global es menos predecible, competitivo y multipolar. Se exige reconsiderar la configuración política, militar y económica tras el derrumbe del socialismo real y de la globalización.</p>
+                            <p><strong>Visión Económica:</strong> Se busca una economía moderna y competitiva que respete e incorpore las características culturales del Perú, pero no hay economía moderna sin sociedad moderna. El país no debe ser pasivo, sino asimilar. Para negociar internacionalmente, es vital ampliar el mercado interno y defender la planta productiva y el empleo.</p>
+                        </div>
+                    </div>
 
-  <script src="js/includes.js" defer></script>
-  <script src="js/navbar.js" defer></script>
-  <script>
-    // Accordion Logic
-    document.addEventListener('DOMContentLoaded', function () {
-      const accordionItems = document.querySelectorAll('.accordion-item');
-      accordionItems.forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        header.addEventListener('click', () => {
-          const content = item.querySelector('.accordion-content');
-          item.classList.toggle('active');
-          if (item.classList.contains('active')) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-            content.style.padding = '1.5rem';
-          } else {
-            content.style.maxHeight = '0';
-            content.style.padding = '0 1.5rem';
-          }
-        });
-      });
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>2. Ideal de la Nación Peruana</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>AHORA NACIÓN busca construir pilares y una base común de pensamiento que privilegie lo que une. El partido se remite a los clásicos peruanos (Víctor Andrés Belaunde, Jorge Basadre, Haya de la Torre y José Carlos Mariátegui). El problema del Perú es que es más Estado y menos Nación. La nación es alma, espíritu, meta común; es un acuerdo en lo fundamental.</p>
+                        </div>
+                    </div>
 
-      // Modal Logic
-      const modal = document.getElementById('valueModal');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalText = document.getElementById('modalText');
-      const closeModal = document.querySelector('.modal-close');
-      
-      document.querySelectorAll('.value-card').forEach(card => {
-        card.addEventListener('click', () => {
-          modalTitle.textContent = card.dataset.title;
-          modalText.textContent = card.dataset.text;
-          modal.style.display = 'block';
-        });
-      });
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>3. Identidad Nacional</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>La heterogeneidad cultural es la fuente del carácter único de la sociedad. Para lograr la modernización con identidad nacional, es necesario que todos los individuos y grupos culturales participen en la edificación del país. AHORA NACIÓN asume la energía positiva de esta heterogeneidad.</p>
+                            <p><strong>Valores y Modernidad:</strong> El partido asume valores de la tradición (disciplina, laboriosidad, trabajo comunitario) y de la modernidad (eficiencia, competitividad, productividad).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>4. Estado, Economía y Sociedad</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>El partido persiste en participar para responder a dilemas como: globalización vs. afirmación nacional, identidad vs. diversidad, Estado vs. mercado. La crisis del Perú no se resolverá solo con economía, ni solo con política. Demanda un diseño global de Estado, economía y sociedad y reclama un proyecto nacional. El partido aspira a conducir el cambio, buscando todo el poder a las regiones.</p>
+                        </div>
+                    </div>
 
-      closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>5. Estado Social</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>El Estado es la organización más acabada para dar estabilidad, pero el Perú no ha devenido en Estado-Nación porque la voluntad colectiva no ha existido. El Estado ha sido solo fuerza. La diferencia clave: El Estado es la casa, el hogar es la Nación. Rescatar la nación es imperativo no solo por razones morales, sino por razones de economía y proyecto nacional.</p>
+                        </div>
+                    </div>
 
-      window.addEventListener('click', (event) => {
-        if (event.target == modal) {
-          modal.style.display = 'none';
-        }
-      });
-    });
-  </script>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>6. Unidad, Justicia y Libertad</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Estos son los grandes temas de la política. El partido busca una sociedad de hombres libres e iguales. La unidad nacional no es unanimidad, sino que radica en la diversidad. El partido cree que la política de ideas fortalece la nación, y que una sociedad fuerte conduce a una economía fuerte, y esta a un Estado fuerte.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- IV. Visión de País y Objetivos Estratégicos -->
+        <!-- ============================================== -->
+        <section id="vision-objetivos" class="section-padding">
+            <div class="container vision-grid">
+                
+                <div class="vision-box">
+                    <h3>Nuestra Visión de País</h3>
+                    <blockquote>
+                        "Contribuir con la tarea histórica de culminar el proceso de construcción de la nación peruana, alentando un empresariado nacional innovador, defendiendo a los trabajadores y construyendo una nación de ciudadanos con desarrollo sostenible en defensa del planeta."
+                    </blockquote>
+                </div>
+
+                <div class="objetivos-list">
+                    <h3>Objetivos Estratégicos</h3>
+                    <ol>
+                        <li><span>Consolidar la democratización</span> y un Estado libre de corrupción e injusticia.</li>
+                        <li><span>Servicios Públicos de Calidad</span> con transparencia y participación de la sociedad civil.</li>
+                        <li><span>Estado de Derecho</span> con Justicia Social, donde todos seamos iguales ante la Ley.</li>
+                        <li><span>República Descentralizada</span> con convivencia armoniosa de todas las culturas.</li>
+                        <li><span>Instituciones Fuertes</span> con separación de poderes y alternancia en el gobierno.</li>
+                        <li><span>Justicia sin Privilegios</span> con un Ministerio Público y Poder Judicial unitarios y descentralizados.</li>
+                        <li><span>Acceso a Derechos</span> universales, garantizando salud y educación de calidad.</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- V. Valores Éticos del Partido -->
+        <!-- ============================================== -->
+        <section id="valores" class="section-padding section-dark">
+            <div class="container">
+                <h2 class="section-title">Valores Éticos del Partido</h2>
+                <div class="valores-layout">
+                    
+                    <!-- Menú de Pestañas (Valores) -->
+                    <nav class="valores-menu">
+                        <button class="valor-btn active" data-target="valor-1">
+                            <span class="valor-icon">🤝</span> Respeto
+                        </button>
+                        <button class="valor-btn" data-target="valor-2">
+                            <span class="valor-icon">🛡️</span> Lealtad
+                        </button>
+                        <button class="valor-btn" data-target="valor-3">
+                            <span class="valor-icon">❤️</span> Solidaridad
+                        </button>
+                        <button class="valor-btn" data-target="valor-4">
+                            <span class="valor-icon">🔄</span> Tolerancia
+                        </button>
+                        <button class="valor-btn" data-target="valor-5">
+                            <span class="valor-icon">💎</span> Honestidad
+                        </button>
+                        <button class="valor-btn" data-target="valor-6">
+                            <span class="valor-icon">👁️</span> Transparencia
+                        </button>
+                        <button class="valor-btn" data-target="valor-7">
+                            <span class="valor-icon">⚖️</span> Integridad
+                        </button>
+                    </nav>
+
+                    <!-- Panel de Contenido de Valores -->
+                    <div class="valor-display-panel">
+                        <div id="valor-1" class="valor-content active">
+                            <h3>Respeto</h3>
+                            <p>Reconocer en uno y en los demás sus derechos, obligaciones, virtudes y defectos con dignidad.</p>
+                        </div>
+                        <div id="valor-2" class="valor-content">
+                            <h3>Lealtad</h3>
+                            <p>Ser fieles a las convicciones y al bien común, incluso en las circunstancias más difíciles.</p>
+                        </div>
+                        <div id="valor-3" class="valor-content">
+                            <h3>Solidaridad</h3>
+                            <p>Ayuda, apoyo, fraternidad y empatía hacia el individuo y poblaciones vulnerables.</p>
+                        </div>
+                        <div id="valor-4" class="valor-content">
+                            <h3>Tolerancia</h3>
+                            <p>Aceptación de personas, situaciones o cosas con las que no se comparten opiniones, ideas o actitudes, pero que se respetan.</p>
+                        </div>
+                        <div id="valor-5" class="valor-content">
+                            <h3>Honestidad</h3>
+                            <p>Respeto a la verdad de lo que se piensa, dice y hace, con relación a la realidad concreta, la objetividad y las evidencias de los hechos.</p>
+                        </div>
+                        <div id="valor-6" class="valor-content">
+                            <h3>Transparencia</h3>
+                            <p>Las decisiones partidarias deben basarse en fundamentos verificables, consistentes y predecibles, sujetas siempre a la información y escrutinio de la militancia y de la ciudadanía, de forma libre, gratuita e inmediata.</p>
+                        </div>
+                        <div id="valor-7" class="valor-content">
+                            <h3>Integridad</h3>
+                            <p>Entendida como la práctica de la honrosez, honestidad, respeto pleno a los derechos humanos, así como absoluto rechazo a la corrupción.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- 
+      AQUÍ TERMINA EL CONTENIDO DE LA SUBPÁGINA
+      (Tu FOOTER iría después de esto)
+    -->
+    <!-- FOOTER (included) -->
+    <div data-include="includes/footer.html"></div>
+
+    <script src="js/includes.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/ideario.js" defer></script>
 </body>
 </html>

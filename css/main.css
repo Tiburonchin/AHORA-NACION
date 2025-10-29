@@ -33,6 +33,9 @@
    Para mejores prestaciones en producción, considera concatenar/minificar este archivo
    y servirlo como un único CSS estático en el servidor (mejor que múltiples @import).
 */
+body {
+        padding-top: 40px; /* Ajuste para la barra superior fija */
+      }
 
 .hero--small {
     min-height: 40vh;
