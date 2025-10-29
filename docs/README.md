@@ -23,3 +23,29 @@ Aviso TEN (opcional): si desea que el aviso del TEN se cargue dinámicamente des
   "address": "Dirección / Horario"
 }
 ```
+
+## Probar el sitio localmente (importante para `includes`)
+
+Si abres los archivos `.html` directamente con el explorador (protocolo `file://`) el navegador bloqueará las llamadas `fetch()` usadas para inyectar los fragmentos (`includes/header.html`, `includes/footer.html`). Para ver el header y los includes correctamente, sirve el proyecto por HTTP.
+
+Ejemplos rápidos (PowerShell):
+
+Con Python 3:
+
+```powershell
+cd "D:\Almacenamiento\trabajo\2026_a\AHORA NACION\Ahora_Nación"
+python -m http.server 8000
+# Abrir en el navegador: http://localhost:8000
+```
+
+Con npx (sin instalar paquetes globales):
+
+```powershell
+cd "D:\Almacenamiento\trabajo\2026_a\AHORA NACION\Ahora_Nación"
+npx http-server -p 8000
+# Abrir en el navegador: http://localhost:8000
+```
+
+Con VS Code: instala la extensión "Live Server" y pulsa "Go Live" en la esquina inferior derecha.
+
+Después de servir por HTTP, recarga la página y abre DevTools (F12) → pestaña Network/Console para confirmar que `includes/header.html` devuelve 200 y que no aparecen errores relacionados con `include error`.
